@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 
 
 const projectsData = [
@@ -11,6 +12,12 @@ const projectsData = [
 import styles from "./Projects.module.css"
 
 export default function Projects() {
+
+    const [ selectedProject, setSelectedProject ] = useState(null);
+    const [ isSidePanelOpen, setIsSidePanelOpen ] = useState(null);
+
+
+
     return (
         <section className={styles.projectsContainer}>
             <h2 className={styles.projectTitle}>PROJECTS</h2>
@@ -30,6 +37,16 @@ export default function Projects() {
                     </div>
             ))}
             </div>
+
+            <div className={styles.sidePanel}></div>
+
+
+
+
+
+
+
+
 
         </section>
 

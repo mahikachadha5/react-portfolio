@@ -77,12 +77,26 @@
 }
 
 .topBlur {
-    width: 40vw;
+    width: 30vw;
     height: 40vw;
     min-width: 350px;
     min-height: 350px;
-    top: 10vw;
-    left: 10vw;
+    top: 5vw;
+    left: 5vw;
+    border: 764px;
+    background: rgba(166, 91, 111, 0.7);
+    position: absolute;
+    filter: blur(150px);
+    z-index: 0;
+}
+
+.bottomBlur {
+    width: 30vw;
+    height: 20vw;
+    min-width: 250px;
+    min-height: 250px;
+    top: 25vw;
+    left: 60vw;
     border: 764px;
     background: rgba(166, 91, 111, 0.7);
     position: absolute;
