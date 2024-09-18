@@ -10,6 +10,7 @@ export default function Navbar() {
     return (
         <nav className={`${styles.navbar} navbar`}>
             <a className={styles.title} href="/">Mahika Chadha</a>
+            
             <div className={styles.menu}>
                 <img className={styles.menuBtn} 
                 src={menuOpen ? getImageURl("nav/closeIcon.png") : getImageURl("nav/menuIcon.png")} 
@@ -18,10 +19,8 @@ export default function Navbar() {
                 />
                 <ul className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
                 onClick={() => setMenuOpen(false)}>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#experience">experience</a></li>
-                    <li><a href="#projects">projects</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>

@@ -5,26 +5,34 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     padding: 0 20%;
+    scroll-margin-top: 100px; /* Adjust based on your nav height */
+    
 }
 
 .projectTitle {
     color: var(--color-text);
     font-weight: bold;
     font-size: 32px;
-    padding-bottom: 35px;
+    padding-bottom: 20px;
+}
+
+.comingSoon {
+    padding-bottom: 30px;
+    font-size: 18px;
 }
 
 .imgContainer {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .project {
     position: relative;
-    width: 360px;
-    height: 300px;
+    width: 380px;
+    height: 320px;
     margin: 20px;
 }
 
@@ -63,8 +71,19 @@
     gap: 10px;
 }
 
+.projectDescription {
+    font-size: 14px;
+    padding: 0px 10px;
+}
+
+.projectName {
+    font-size: 18px;
+    font-style: bold;
+}
+
 .skillItem {
     padding: 5px 10px;
+    font-size: 12px;
     border-radius: 20px;
     background-color: var(--color-primary);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional box shadow */
@@ -77,6 +96,91 @@
 .project:hover img {
     filter: brightness(30%); /* Darkens the image on hover */
 }
+
+.sidePanel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 500px;
+    height: 100vh;
+
+    transition: right 0.5s ease;
+    z-index: 1000;
+    overflow-y: auto;
+
+    padding: 25px;
+    padding-right: 25px;
+    background: var(--color-primary);
+}
+
+.sidePanel.open {
+    right: 0;
+}
+
+.closeBtn {
+    margin-bottom: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.hr {
+    background-color: rgba(225, 219, 225, 0.5);
+    border-width: 0.1px;
+    margin-bottom: 32px;
+}
+
+.sidePanelContent {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidePanelImg {
+    width: 450px;
+    height: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.sidePanelTitle {
+    font-size: 24px;
+}
+
+.subheadings {
+    font-size: 20px;
+}
+
+.sidePanelSkills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidePanelSkillItem {
+    background-color: var(--color-secondary);
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.sidePanelLink {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+@media screen and (max-width: 830px) {
+    .imgContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+
+
 
 
 

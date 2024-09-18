@@ -2,20 +2,20 @@
 
 .container {
     position: relative;
+
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-left: 10%;
     margin-right: 10%;
     z-index: 1;
     height: 100vh; /* Full viewport height */
-    
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     color: var(--color-text);
     z-index: 1;
     width: 100%;
@@ -25,16 +25,14 @@
     font-size: 72px;
     margin-bottom: 34px;
     font-weight: 900;
-    align-self: start;
+    color: var(--color-secondary);
     font-family: var(--font-roboto);
-    background: linear-gradient(
-        90deg, 
-        rgba(255, 255, 255, 1) 70%, 
-        rgba(255,255,255, 0) 120%
-    );
-    -webkit-text-fill-color: transparent;
-    -webkit-animation: backwards;
-    -webkit-background-clip: text;
+    letter-spacing: 4px;
+    z-index: 2;
+    
+    position: relative;
+    transform: none; /* Remove any manual transforms if locomotive-scroll is handling it */
+
 }
 
 .description {
@@ -47,7 +45,7 @@
 
 .contactBtn {
     text-decoration: none;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     color: var(--color-text);
     border-radius: 100px;
     font-size: 20px;
@@ -55,6 +53,7 @@
     padding: 20px 26px;
     box-shadow: 0 0 4px 0 rgba(0,0,0, 0.5);
     z-index: 1;
+    align-self: center;
 
     animation-name: floating;
     animation-duration: 3s;
@@ -73,16 +72,29 @@
     100% {
         transform: translate(0px, -0px)
     }
+}
+
+.imgHolder {
+    display: flex;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.imgHolder img {
+    width: 340px;
+    height: 350px;
+    border-radius: 20px;
+    
 
 }
 
 .topBlur {
-    width: 30vw;
-    height: 40vw;
-    min-width: 350px;
-    min-height: 350px;
-    top: 5vw;
-    left: 5vw;
+    width: -10vw;
+    height: -10vw;
+    min-width: 250px;
+    min-height: 250px;
+    top: -5vw;
+    left: -8vw;
     border: 764px;
     background: rgba(166, 91, 111, 0.7);
     position: absolute;
