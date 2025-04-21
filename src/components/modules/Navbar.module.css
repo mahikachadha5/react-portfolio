@@ -1,37 +1,25 @@
-@import "../vars.css";
+@import "../../vars.css";
 
 .navbar {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 61px;
-    margin: 0 10%;
-    position: sticky; /* Makes the navbar sticky */
-    top: 0; /* Sticks the navbar to the top of the viewport */
-    z-index: 1000; 
+    padding: 20px 30px;
+    position: sticky;
+    top: 0;
     transition: transform 0.3s ease-in-out;
+    z-index: 2;
 }
 
 .title {
-    font-size: 30px;
-    font-weight: 600;
     text-decoration: none;
     align-self: flex-end;
-    color: var(--color-text)
-}
-
-.title img {
-    display: flex;
-    align-self: flex-start;
-    width: 55px;
-    height: 55px;
-    z-index: 1000;
+    color: var(--color-primary)
 }
 
 .menu {
     display: flex;
-
 }
 
 .menuBtn {
@@ -40,14 +28,24 @@
 
 .menuItems {
     display: flex;
-    gap: 47px;
+    gap: 30px;
+    
     list-style: none;
 }
 
 .menuItems a {
-    font-size: 20px;
+    font-size: 16px;
     color: var(--color-text);
+    letter-spacing: -0.07em;
     text-decoration: none;
+}
+
+.menuItems a:hover {
+    font-size: 16px;
+    color: var(--color-primary);
+    letter-spacing: -0.07em;
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
 }
 
 @media screen and (max-width: 830px) {
