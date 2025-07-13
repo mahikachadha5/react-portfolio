@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px 30px;
+    max-width: 100%;
     position: sticky;
     top: 0;
     transition: transform 0.3s ease-in-out;
@@ -13,9 +14,9 @@
 }
 
 .title {
-    text-decoration: none;
-    align-self: flex-end;
-    color: var(--color-primary)
+  width: 30px;
+  height: 30px;
+  color: var(--color-primary)
 }
 
 .menu {
@@ -29,7 +30,6 @@
 .menuItems {
     display: flex;
     gap: 30px;
-    
     list-style: none;
 }
 
@@ -48,10 +48,15 @@
     text-decoration-thickness: 2px;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 600px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .title {
+        align-self: flex-start;
+        font-size: 30px;
     }
 
     .menu {
