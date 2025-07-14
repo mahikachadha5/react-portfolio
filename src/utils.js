@@ -1,11 +1,9 @@
-export const getImageURL = (path) => {
-    return `/assets/${path}`;
-}
+import projects from "./data/projects.json";
 
-export const getProjects = async () => {
-    const response = await fetch('/src/data/projects.json');
-    if (!response.ok) {
-        throw new Error('Failed to fetch projects data');
-    }
-    return response.json();
+export const getImageURL = (path) => {
+  return `/assets/${path}`;
+};
+
+export function getProjects() {
+  return projects;
 }
