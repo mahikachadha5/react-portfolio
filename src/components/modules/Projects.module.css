@@ -1,6 +1,6 @@
 .projectsContainer {
   max-width: 100%;
-  padding: 10%;
+  padding: 5% 10%;
   width: 100%;
   z-index: 1;
 }
@@ -79,7 +79,7 @@
 
 .projectName {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: var(--font-semibold);
   margin-bottom: 0.5rem;
 }
 
@@ -106,8 +106,8 @@
   border: 1px solid rgba(255, 76, 102, 0.3);
   border-radius: 3rem;
   padding: 0.25rem 0.75rem;
-  font-size: 0.75rem;
-  font-weight: 500;
+  font-size: var(--font-sm);
+  font-weight: var(--font-semibold);
 }
 
 @media (max-width: 768px) {
@@ -125,7 +125,7 @@
 .error {
   text-align: center;
   padding: 2rem;
-  font-size: 1.2rem;
+  font-size: var(--font-md);
   color: rgba(255, 255, 255, 0.8);
 }
 

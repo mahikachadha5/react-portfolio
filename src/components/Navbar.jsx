@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import styles from "./modules/Navbar.module.css";
-import { getImageURl } from "../utils";
+import { getImageURL } from "../utils";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,7 +11,7 @@ export default function Navbar() {
       <img
         href="/"
         className={styles.title}
-        src={getImageURl("nav/Vector.png")}
+        src={getImageURL("nav/Vector.png")}
       />
 
       <div className={styles.menu}>
@@ -19,8 +19,8 @@ export default function Navbar() {
           className={styles.menuBtn}
           src={
             menuOpen
-              ? getImageURl("nav/closeIcon.png")
-              : getImageURl("nav/menuIcon.png")
+              ? getImageURL("nav/closeIcon.png")
+              : getImageURL("nav/menuIcon.png")
           }
           onClick={() => setMenuOpen(!menuOpen)}
           alt="menu-button"
@@ -29,6 +29,9 @@ export default function Navbar() {
           className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
           onClick={() => setMenuOpen(false)}
         >
+          <li>
+            <a href="#about">ABOUT</a>
+          </li>
           <li>
             <a href="#projects">PROJECTS</a>
           </li>

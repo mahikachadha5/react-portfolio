@@ -4,7 +4,7 @@
   --color-text: #e6e6e6;
 
   /* Accent Colors */
-  --color-primary: #ff6b81;
+  --color-primary: #ff4c66;
   --color-secondary: #ff9a76;
   --color-glow: #ff4d6d;
   --color-fade: #ffb26b;
@@ -21,6 +21,7 @@
   --font-xl: 1.5rem;
   --font-2xl: 2.25rem;
   --font-3xl: 3rem;
+  --font-4xl: 4rem;
 
   /* Font weights */
   --font-regular: 400;

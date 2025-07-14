@@ -26,7 +26,7 @@
 }
 
 .backButton:hover {
-  color: #ff4c66;
+  color: var(--color-primary);
 }
 
 .contentWrapper {
@@ -65,10 +65,10 @@
   padding: 0.25rem 0.75rem;
   background-color: rgba(255, 76, 102, 0.1);
   border: 1px solid rgba(255, 76, 102, 0.3);
-  color: #ff4c66;
+  color: var(--color-primary);
   border-radius: 3rem;
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: var(--font-lg);
+  font-weight: var(--font-medium);
 }
 
 .heroImageContainer {
@@ -104,9 +104,6 @@
   list-style-position: inside;
 }
 
-.secondaryHeader {
-}
-
 .outcome,
 .projectDescription {
   font-family: var(--font-body);
@@ -124,12 +121,12 @@
 
 .projectLink {
   display: inline-block;
-  background-color: #ff4c66;
+  background-color: var(--color-primary);
   color: white;
   text-decoration: none;
   padding: 0.875rem 2rem;
   border-radius: 3rem;
-  font-weight: 500;
+  font-weight: var(--font-medium);
   font-size: var(--font-lg);
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(255, 76, 102, 0.3);

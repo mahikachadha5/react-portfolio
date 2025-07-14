@@ -1,5 +1,5 @@
 import styles from "./modules/Contact.module.css";
-import { getImageURl } from "../utils";
+import { getImageURL } from "../utils";
 
 const contacts = [
   {
@@ -32,7 +32,7 @@ export default function Contact() {
         {contacts.map(({ label, icon, link, alt }, index) => (
           <li key={index} className={styles.link}>
             <a href={link} target="_blank" rel="noopener noreferrer">
-              <img src={getImageURl(icon)} alt={alt} />
+              <img src={getImageURL(icon)} alt={alt} />
               {label}
             </a>
           </li>

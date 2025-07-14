@@ -1,12 +1,10 @@
-@import "../../vars.css";
-
 .contactSection {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 6rem 10%;
   margin-top: 100px;
-  background: #121212;
+  background: var(--color-bg);
   color: var(--color-text);
   flex-wrap: wrap;
   gap: 2rem;
