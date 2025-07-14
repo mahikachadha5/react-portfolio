@@ -1,63 +1,65 @@
-@import "../../vars.css";
-
 .contactSection {
-    display: flex;
-    flex-direction: row;
-    color: var(--color-text);
-    margin-top: 120px;
-    background-color: var(--color-secondary);
-    justify-content: space-evenly;
-    width: 100vw;
-    padding: 58px 10%;
-    gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 6rem 10%;
+  margin-top: 100px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  flex-wrap: wrap;
+  gap: 2rem;
+  z-index: 10;
 }
 
-.text h2 {
-    font-size: 50px;
-    font-weight: 700;
-    letter-spacing: 4px;
+.text {
+  max-width: 400px;
 }
-
-.text p {
-    font-size: 24px;
-    font-weight: 400;
-    letter-spacing: 2px;
-}
-
 
 .links {
-    display: flex;
-    flex-direction: column;
-    gap: 26px;
-    list-style: none;
-    align-items: flex-start;
-
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .link {
-    
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.link img {
+  width: 45px;
+  height: 45px;
+  display: block;
 }
 
 .link a {
-    color: var(--color-text);
-    text-decoration: none;
-    font-size: 24px;
+  font-size: var(--font-xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
+.link a:hover {
+  opacity: 0.75;
 }
 
 @media screen and (max-width: 830px) {
-    .contactSection {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        justify-content: space-evenly;
-    }
+  .contactSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-evenly;
+  }
 
-    .text p {
-        margin-bottom: 20px;
-    }
-    
+  .text p {
+    margin-bottom: 20px;
+  }
 }

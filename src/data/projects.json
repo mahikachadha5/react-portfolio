@@ -1,42 +1,95 @@
 [
-    {
-        "title": "p1",
-        "imageSrc": "projects/project.png",
-        "description": "This is a project",
-        "skills": ["React", "Node.js", "Express"],
-        "demo": "https://example.com",
-        "source": "https://example.com"
-    },
-    {
-        "title": "p1",
-        "imageSrc": "projects/project.png",
-        "description": "This is a project",
-        "skills": ["React", "Node.js", "Express"],
-        "demo": "https://example.com",
-        "source": "https://example.com"
-    },
-    {
-        "title": "p1",
-        "imageSrc": "projects/project.png",
-        "description": "This is a project",
-        "skills": ["React", "Node.js", "Express"],
-        "demo": "https://example.com",
-        "source": "https://example.com"
-    },
-    {
-        "title": "p1",
-        "imageSrc": "projects/project.png",
-        "description": "This is a project",
-        "skills": ["React", "Node.js", "Express"],
-        "demo": "https://example.com",
-        "source": "https://example.com"
-    },
-    {
-        "title": "p1",
-        "imageSrc": "projects/project.png",
-        "description": "This is a project",
-        "skills": ["React", "Node.js", "Express"],
-        "demo": "https://example.com",
-        "source": "https://example.com"
+  {
+    "id": 1,
+    "name": "Echo",
+    "description": "Analyzes user reviews for places with sentiment analysis.",
+    "longDesc": "A React web app that displays insights on user reviews of a searched query. These insights include graphs with breakdowns of positive, negative, neutral reviews, sentiment over time, and an AI-generated summary of most recent reviews. The app helps users quickly understand public opinion about different places without sifting through hundreds of reviews. All information fetched from an external API.",
+    "skills": ["React", "D3.js", "CSS", "Node.js", "Express", "Axios"],
+    "imageUrl": "/assets/projects/echo/echo.png",
+    "sourceCode": "",
+    "caseStudy": {
+      "problem": "Users had to sift through hundreds of online reviews to get a sense of public opinion.",
+      "goal": "Create a tool to surface review trends and sentiment in a digestible visual format.",
+      "approach": "I designed several UI iterations in Figma focusing on clarity and visual hierarchy. Key metrics like overview, sentiment breakdown and images were prioritized.",
+      "designIterations": [
+        {
+          "title": "Low-Fidelity Mock",
+          "image": "/assets/projects/echo/iteration1.png",
+          "notes": "Created a basic layout framework with placeholder elements to establish general page structure. Visual styling was minimal, with no defined hierarchy or content yet. Feedback focused on maintaining clean separation between blocks to avoid clutter."
+        },
+        {
+          "title": "Mid-Fidelity Mock",
+          "image": "/assets/projects/echo/iteration2.png",
+          "notes": "Introduced content and visual hierarchy through grouped sections, light gray backgrounds, and clear labels. This version helped validate layout logic and user flows."
+        },
+        {
+          "title": "Final Design",
+          "image": "/assets/projects/echo/final.png",
+          "notes": "Final iteration applied a polished visual style and color scheme, enhancing clarity and engagement. The organization of each section was very strategic, prioritizing high level information first and more specific details later. Each section was differentiated with dark backgrounds, accent colors, and refined typography. Interactive elements and data visualizations were styled for readability. This version addressed clutter concerns and clearly guided the user's eye across the content."
+        }
+      ],
+      "outcomes": [
+        "Improved user understanding of sentiment breakdown at a glance",
+        "Positive feedback on design clarity and speed of insights",
+        "First project to integrate D3.js charts"
+      ],
+      "demoUrl": "https://youtu.be/JJpQ5CEmbBI"
     }
+  },
+  {
+    "id": 2,
+    "name": "My Portfolio",
+    "description": "This website!",
+    "longDesc": "Completed in 12 hours, deployed using Netlify, and fully responsive across all devices!",
+    "skills": ["React.js", "Javascript", "CSS Modules"],
+    "imageUrl": "/assets/projects/portfolio.png",
+    "sourceCode": "https://github.com/mahikachadha5/react-portfolio"
+  },
+  {
+    "id": 3,
+    "name": "Recipe Finder",
+    "description": "Discover and organize recipes tailored to your preferences and dietary needs",
+    "longDesc": "The app allows users to discover a wide variety of recipes tailored to their dietary preferences and needs. Users can save their favorite recipes and even create shopping lists based on selected ingredients. The app also offers features like user authentication, allowing for a secure and personalized cooking experience that evolves with the user's tastes and preferences.",
+    "skills": ["Android Studio", "Java", "Firebase", "RESTful API"],
+    "imageUrl": "/assets/projects/recipeAppGif.gif",
+    "sourceCode": "https://github.com/neu-cs4520/final-project-groups4finalproject-4",
+    "caseStudy": {
+      "problem": "Users struggle to find recipes that match their dietary preferences and often forget ingredients they need to buy.",
+      "goal": "Create an app that allows users to discover recipes, save favorites, and create shopping lists.",
+      "approach": "I developed a mobile app using Android Studio and Java, integrating Firebase for user authentication and data storage. The app features a RESTful API to fetch recipes based on user preferences.",
+      "outcomes": [
+        "Created a fully functional mobile app with user authentication",
+        "Implemented features for saving favorite recipes and creating shopping lists",
+        "Demonstrated ability to integrate Firebase and RESTful APIs in mobile development"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "name": "Travel Journal",
+    "description": "Travel journal of my trips while studying abroad.",
+    "longDesc": "This was my first solo React project, and a great way to compile my favorite memories and images from when I was studying abroad.",
+    "skills": ["React", "Javascript", "CSS"],
+    "imageUrl": "/assets/projects/travelJournal.png",
+    "sourceCode": "https://v2.scrimba.com/s005kmodh3"
+  },
+  {
+    "id": 5,
+    "name": "Unplugged",
+    "description": "An app to help users discover engaging activities in their area.",
+    "longDesc": "Unplugged is an app designed to help users discover engaging activities in their area, encouraging them to take a break from screens and connect with the world around them.",
+    "skills": ["Figma"],
+    "imageUrl": "/assets/projects/unplugged.png",
+    "sourceCode": "https://www.figma.com/proto/H25mxEbFusN5oOlgVaOQI7/UNPLUGGED?node-id=226-1984&node-type=canvas&t=Z7aEin7uTfd3pfdX-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=85%3A1465&show-proto-sidebar=1",
+    "caseStudy": {
+      "problem": "People are spending too much time on screens and not enough time engaging with the world around them.",
+      "goal": "Create an app that helps users discover engaging activities in their area, encouraging them to take a break from screens.",
+      "approach": "I designed a user-friendly interface that allows users to easily find activities based on their interests and location. The design focuses on simplicity and ease of use, with clear navigation and visually appealing layouts.",
+      "outcomes": [
+        "Created a visually appealing and user-friendly app design",
+        "Received positive feedback on the simplicity and effectiveness of the design",
+        "Demonstrated ability to create engaging user experiences through Figma"
+      ]
+    }
+  }
 ]
