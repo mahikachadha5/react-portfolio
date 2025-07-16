@@ -115,9 +115,9 @@ export default function ProjectDetail() {
                 className={styles.projectMeta}
                 variants={itemVariants}
               >
-                <div className={styles.skillsContainer}>
+                <div className={`${styles.skillsContainer} code `}>
                   {skills.map((skill, index) => (
-                    <span key={index} className={styles.skillTag}>
+                    <span key={index} className={`${styles.skillTag} code `}>
                       {skill}
                     </span>
                   ))}
@@ -159,19 +159,22 @@ export default function ProjectDetail() {
 
                     {designIterations && designIterations.length > 0 && (
                       <>
-                        <h3 className={styles.sectionHeader}>
+                        <h3 className={`${styles.sectionHeader} design `}>
                           Design Iterations
                         </h3>
-                        <div className={styles.designIterations}>
+                        <div className={`${styles.designIterations} design `}>
                           {designIterations?.map((iteration, index) => (
-                            <div key={index} className={styles.iterationBlock}>
+                            <div
+                              key={index}
+                              className={`${styles.iterationBlock} design `}
+                            >
                               <h4>{iteration.title}</h4>
                               <img
                                 src={iteration.image}
                                 alt={iteration.title}
-                                className={styles.iterationImage}
+                                className={`${styles.iterationImage} design `}
                               />
-                              <p className={styles.iterationNotes}>
+                              <p className={`${styles.iterationNotes} design `}>
                                 {iteration.notes}
                               </p>
                             </div>

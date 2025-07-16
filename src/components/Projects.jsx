@@ -24,33 +24,42 @@ export default function Projects() {
   }, []);
 
   return (
-    <div id="projects" className={styles.projectsContainer}>
+    <div
+      id="projects"
+      data-component="projectCard"
+      className={`${styles.projectsContainer} project`}
+    >
       <h2 className={global["heading-lg"]}>PROJECTS</h2>
       {loading && <div className={styles.loading}>Loading projects...</div>}
 
       {error && <div className={styles.error}>{error}</div>}
 
       {!loading && !error && (
-        <div className={styles.imgContainer}>
+        <div className={`${styles.imgContainer} project`}>
           {projects.map((project) => (
-            <div key={project.id} className={styles.project}>
+            <div key={project.id} className={`${styles.project} project`}>
               <Link
-                className={styles.projectLink}
+                className={`${styles.projectLink} project`}
                 to={`/projects/${project.id}`}
               >
                 <img
                   src={project.imageUrl}
                   alt={project.name}
-                  className={styles.projectImage}
+                  className={`${styles.projectImage} project`}
                 />
-                <div className={styles.projectOverlay}>
-                  <h1 className={styles.projectName}>{project.name}</h1>
-                  <p className={styles.projectDescription}>
+                <div className={`${styles.projectOverlay} project`}>
+                  <h1 className={`${styles.projectName} project`}>
+                    {project.name}
+                  </h1>
+                  <p className={`${styles.projectDescription} project`}>
                     {project.description}
                   </p>
-                  <div className={styles.skills}>
+                  <div className={`${styles.skills} project`}>
                     {project.skills.map((skill, index) => (
-                      <div key={index} className={styles.skillItem}>
+                      <div
+                        key={index}
+                        className={`${styles.skillItem} project`}
+                      >
                         {skill}
                       </div>
                     ))}

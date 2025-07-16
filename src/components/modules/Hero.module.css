@@ -13,6 +13,25 @@
   font-weight: 200;
   color: var(--color-text);
   justify-content: center;
+  white-space: nowrap;
+}
+
+.title2 span {
+  font-size: var(--font-3xl) !important;
+  font-weight: 200 !important;
+  color: var(--color-text) !important;
+}
+
+.title2 {
+  font-size: var(--font-3xl) !important;
+  font-weight: 200 !important;
+  color: var(--color-text) !important;
+}
+
+.typewriterText span:first-child {
+  font-size: var(--font-3xl) important;
+  font-weight: 200 !important;
+  color: var(--color-primary) !important;
 }
 
 .letter {
