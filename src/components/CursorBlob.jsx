@@ -34,19 +34,24 @@ const CursorBlob = () => {
       const blobCenterX = rect.left + rect.width / 2;
       const blobCenterY = rect.top + rect.height / 2;
 
-      const dx = blobCenterX - mousePosition.x;
-      const dy = blobCenterY - mousePosition.y;
+      const dx = mousePosition.x - blobCenterX;
+      const dy = mousePosition.y - blobCenterY;
       const distance = Math.sqrt(dx * dx + dy * dy);
 
       if (distance < 300) {
+        // Move away from cursor
+        const pushX = -(dx / distance) * 200;
+        const pushY = -(dy / distance) * 200;
+        blob.style.transform = `translate(${pushX}px, ${pushY}px)`;
         blob.style.opacity = "0.5";
-        blob.style.transition =
-          "transform 0.3s ease-out, opacity 0.3s ease-out";
       } else {
+        // Return closer to original position
+        blob.style.transform = `translate(0px, 0px)`;
         blob.style.opacity = "0.7";
-        blob.style.transition =
-          "transform 0.5s ease-out, opacity 0.5s ease-out";
       }
+
+      // Add transition for smooth movement
+      blob.style.transition = "transform 0.7s ease-out, opacity 0.3s ease-out";
     };
 
     updateBlob(blob1Ref);
@@ -56,7 +61,7 @@ const CursorBlob = () => {
   }, [mousePosition]);
 
   return (
-    <div className={styles.blobContainer}>
+    <div className={styles.blobsContainer}>
       <div ref={blob1Ref} className={`${styles.blob} ${styles.blob1}`} />
       <div ref={blob2Ref} className={`${styles.blob} ${styles.blob2}`} />
       <div ref={blob3Ref} className={`${styles.blob} ${styles.blob3}`} />

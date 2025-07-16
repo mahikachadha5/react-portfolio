@@ -16,9 +16,7 @@
   height: 300px;
   border-radius: 50%;
   filter: blur(120px);
-  opacity: 0.8;
-  will-change: transform, opacity;
-  animation: floatBlob 20s ease-in-out infinite alternate;
+  will-change: transform, opacity, translate;
 }
 
 .blob1 {
@@ -32,7 +30,7 @@
 }
 
 .blob2 {
-  top: 60%;
+  top: 80%;
   left: 0%;
   background: radial-gradient(
     circle,
@@ -42,8 +40,8 @@
 }
 
 .blob3 {
-  top: 50%;
-  left: 50%;
+  top: 70%;
+  left: 60%;
   animation-delay: 2s;
   background: radial-gradient(
     circle,
@@ -53,7 +51,7 @@
 }
 
 .blob4 {
-  top: 20%;
+  top: 0%;
   left: 70%;
   animation-delay: 4s;
   background: radial-gradient(
@@ -62,6 +60,7 @@
     var(--color-fade) 50%
   );
 }
+
 
 @keyframes floatBlob {
   0% {
