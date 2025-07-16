@@ -25,7 +25,7 @@ export default function Hero() {
         ))}
       </h1>
 
-      <div className={`${styles.title} code`}>
+      <div className={`${styles.title2} code`}>
         I'M A{" "}
         <Typewriter
           words={[
