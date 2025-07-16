@@ -35,10 +35,10 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className={styles.aboutContainer}>
+    <section id="about" className={`${styles.aboutContainer} code`}>
       <h2>ABOUT ME</h2>
-      <div className={styles.contentContainer}>
-        <div className={styles.leftContainer}>
+      <div className={`${styles.contentContainer} code`}>
+        <div className={`${styles.textContainer} code`}>
           {/* <img className={styles.image} src={getImageURL("/contact/me.png")} /> */}
           <p className={styles.description}>
             I blend design, code, and cognitive science to build interfaces that
@@ -47,13 +47,13 @@ export default function About() {
             unique perspective to Software Engineering.
           </p>
         </div>
-        <div className={styles.skillsContainer}>
+        <div className={`${styles.skillsContainer} code`}>
           {skills.map((group) => (
             <div key={group.category}>
               <h3 className={styles.skillsHeader}>{group.category}</h3>
               <ul className={styles.skillsList}>
                 {group.items.map(({ label, icon }, index) => (
-                  <li key={index} className={styles.skillItem}>
+                  <li key={index} className={`${styles.skillItem} code`}>
                     <img
                       className={styles.skillImg}
                       src={getImageURL(icon)}
