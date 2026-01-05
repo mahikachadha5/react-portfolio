@@ -14,7 +14,7 @@ export default function Hero() {
   };
 
   return (
-    <section className={styles.container}>
+    <section id="about" className={styles.container}>
       <h1 className={styles.title}>
         {name.split("").map((char, index) => (
           <span key={index} className={styles.letter}>

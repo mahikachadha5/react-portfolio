@@ -35,7 +35,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className={`${styles.aboutContainer} code`}>
+    <section id="placeholder" className={`${styles.aboutContainer} code`}>
       <h2>ABOUT ME</h2>
       <div className={`${styles.contentContainer} code`}>
         <div className={`${styles.textContainer} code`}>
