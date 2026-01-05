@@ -31,14 +31,14 @@
 }
 
 .menuItems a {
-  font-size: var(--font-lg);
+  font-size: var(--font-sm);
   color: var(--color-text);
   letter-spacing: -0.07em;
   text-decoration: none;
 }
 
 .menuItems a:hover {
-  font-size: var(--font-lg);
+  font-size: var(--font-sm);
   color: var(--color-primary);
   letter-spacing: -0.07em;
   text-decoration-line: underline;

@@ -29,7 +29,6 @@ export default function Projects() {
       data-component="projectCard"
       className={`${styles.projectsContainer} project`}
     >
-      <h2 className={global["heading-lg"]}>PROJECTS</h2>
       {loading && <div className={styles.loading}>Loading projects...</div>}
 
       {error && <div className={styles.error}>{error}</div>}

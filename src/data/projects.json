@@ -38,15 +38,6 @@
   },
   {
     "id": 2,
-    "name": "My Portfolio",
-    "description": "This website!",
-    "longDesc": "Completed in 12 hours, deployed using Netlify, and fully responsive across all devices!",
-    "skills": ["React.js", "Javascript", "CSS Modules"],
-    "imageUrl": "/assets/projects/portfolio.png",
-    "sourceCode": "https://github.com/mahikachadha5/react-portfolio"
-  },
-    {
-    "id": 3,
     "name": "strategy.town",
     "description": "A project in which I extended current functionality with new user stories.",
     "longDesc": "The project extended existing single-player functionality to support real-time multiplayer interactions, user progress tracking, and personalized statistics dashboards. Players can track wins, streaks, and scores over time, adding a competitive and engaging layer to the games. The project demonstrates both front-end development skills and system design thinking required to manage multiplayer game state and user data.",
@@ -55,7 +46,7 @@
     "sourceCode": "https://github.com/neu-cs4530/summer25-project-summer25-project-binacle"
   },
   {
-    "id": 4,
+    "id": 3,
     "name": "Recipe Finder",
     "description": "Discover and organize recipes tailored to your preferences and dietary needs",
     "longDesc": "The app allows users to discover a wide variety of recipes tailored to their dietary preferences and needs. Users can save their favorite recipes and even create shopping lists based on selected ingredients. The app also offers features like user authentication, allowing for a secure and personalized cooking experience that evolves with the user's tastes and preferences.",
@@ -74,7 +65,7 @@
     }
   },
   {
-    "id": 5,
+    "id": 4,
     "name": "Travel Journal",
     "description": "Travel journal of my trips while studying abroad.",
     "longDesc": "This was my first solo React project, and a great way to compile my favorite memories and images from when I was studying abroad.",
@@ -83,7 +74,7 @@
     "sourceCode": "https://v2.scrimba.com/s005kmodh3"
   },
   {
-    "id": 6,
+    "id": 5,
     "name": "Unplugged",
     "description": "An app to help users discover engaging activities in their area.",
     "longDesc": "Unplugged is an app designed to help users discover engaging activities in their area, encouraging them to take a break from screens and connect with the world around them.",
