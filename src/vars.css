@@ -1,16 +1,17 @@
 :root {
   /* Base Colors */
-  --color-bg: #0b0b0f;
-  --color-text: #e6e6e6;
+  --color-bg: #e6e6e6;
+  --color-text: #0b0b0f;
 
   /* Accent Colors */
-  --color-primary: #ff4c66;
-  --color-secondary: #ff9a76;
-  --color-glow: #ff4d6d;
-  --color-fade: #ffb26b;
+  --color-primary: #5B1166;
+  --color-secondary: #341539;
+  --color-glow:#83358F;
+  --color-fade:#CE53E0; 
+  --color-glow-rgb: 131, 53, 143;
 
   /* Fonts */
-  --font-heading: "Space Grotesk", sans-serif;
+  --font-heading: "Instrument Serif", serif;
   --font-body: "Inter", sans-serif;
 
   /* Font sizes */
@@ -24,8 +25,9 @@
   --font-4xl: 4rem;
 
   /* Font weights */
-  --font-regular: 400;
+  --font-regular: 300;
   --font-medium: 500;
-  --font-semibold: 600;
-  --font-bold: 700;
+
+  /* Body font spacing */
+  --font-spacing: 0.05em;
 }
