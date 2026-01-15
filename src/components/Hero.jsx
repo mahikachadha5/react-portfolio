@@ -1,7 +1,7 @@
 import styles from "./modules/Hero.module.css";
 
 export default function Hero() {
-  const name = "MAHIKA CHADHA";
+  const name = "Mahika Chadha";
 
   const handleScrollToSection = () => {
     const targetElement = document.getElementById("projects");
@@ -14,20 +14,23 @@ export default function Hero() {
   };
 
   return (
-    <section id="about" className={styles.container}>
-      <h1 className={styles.title}>
+    <section className={styles.container}>
+      <div className={styles.heroContent}>
+        <h1 className={styles.title}>
         {name.split("").map((char, index) => (
           <span key={index} className={styles.letter}>
             {char == " " ? "\u00A0" : char}
           </span>
         ))}
-      </h1>
+        </h1>
 
-      <div className={`${styles.description}`}>
-        FULL-STACK DEVELOPMENT & UX-DRIVEN PROBLEM SOLVING
+        <div className={`${styles.description}`}>
+          Design-Driven Software Engineer
+        </div>
       </div>
+    
       <button onClick={handleScrollToSection} className={styles.button}>
-        VIEW MY WORK ↓
+        . ݁₊ ⊹ ˖ .‧ˋ°•*⁀➵
       </button>
     </section>
   );
