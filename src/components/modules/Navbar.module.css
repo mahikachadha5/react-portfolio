@@ -33,14 +33,15 @@
 .menuItems a {
   font-size: var(--font-sm);
   color: var(--color-text);
-  letter-spacing: -0.07em;
+  letter-spacing: -0.05em;
+  font-weight: var(--font-regular);
   text-decoration: none;
 }
 
 .menuItems a:hover {
   font-size: var(--font-sm);
   color: var(--color-primary);
-  letter-spacing: -0.07em;
+  letter-spacing: -0.05em;
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
 }
