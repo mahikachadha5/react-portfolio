@@ -27,8 +27,9 @@ export default function Projects() {
     <div
       id="projects"
       data-component="projectCard"
-      className={`${styles.projectsContainer} project`}
+      className={`${styles.projectsContainer}`}
     >
+      <h2 className={`${styles.header}`}>Projects</h2>
       {loading && <div className={styles.loading}>Loading projects...</div>}
 
       {error && <div className={styles.error}>{error}</div>}

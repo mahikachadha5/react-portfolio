@@ -35,21 +35,20 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className={`${styles.aboutContainer} code`}>
-      <h2 className={`${styles.header}`}>About Me</h2>
-      <div className={`${styles.contentContainer} code`}>
-        <div className={`${styles.textContainer} code`}>
+    <section id="about" className={`${styles.aboutContainer}`}>
+      <h2>About Me</h2>
+      
+        <div className={`${styles.textContainer}`}>
           <p className={styles.description}>
-            I design and build software with <strong>people</strong> in mind.<br /><br />
-            Backed by a joint degree in Computer Science and Cognitive Psychology, 
+            I design and build software with <strong>people</strong> in mind. Backed by a joint degree in Computer Science and Cognitive Psychology, 
             I focus on creating <strong>intuitive and thoughtful</strong> user experiences.
             <br />
             <br />
-            Prev @ Delsys, Calvin Klein & Tommy Hilfiger
+            Prev @ Delsys, PVH (Calvin Klein & Tommy Hilfiger)
           </p>
           
         </div>
-        <div className={`${styles.skillsContainer} code`}>
+        <div className={`${styles.skillsContainer}`}>
           {skills.map((group) => (
             <div key={group.category}>
               <h3 className={styles.skillsHeader}>{group.category}</h3>
@@ -68,7 +67,6 @@ export default function About() {
             </div>
           ))}
         </div>
-      </div>
     </section>
   );
 }

@@ -11,7 +11,7 @@ export default function Navbar() {
       <img
         href="/"
         className={styles.title}
-        src={getImageURL("nav/mc.svg")}
+        src={getImageURL("nav/icon.svg")}
       />
 
       <div className={styles.menu}>
