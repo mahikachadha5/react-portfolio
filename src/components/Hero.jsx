@@ -4,7 +4,7 @@ export default function Hero() {
   const name = "Mahika Chadha";
 
   const handleScrollToSection = () => {
-    const targetElement = document.getElementById("projects");
+    const targetElement = document.getElementById("about");
     if (targetElement) {
       targetElement.scrollIntoView({
         behavior: "smooth",
