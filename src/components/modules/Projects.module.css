@@ -1,6 +1,6 @@
 .projectsContainer {
   max-width: 100%;
-  padding: 5% 10%;
+  padding: 10% 10%;
   width: 100%;
   z-index: 1;
 }
@@ -85,6 +85,8 @@
 
 .projectDescription {
   font-size: var(--font-sm);
+  font-weight: 300;
+  letter-spacing: 0.05em;
   margin-bottom: 0.5rem;
   opacity: 0.9;
   overflow: hidden;

@@ -15,16 +15,11 @@ export default function Navbar() {
       />
 
       <div className={styles.menu}>
-        <img
+        <button
           className={styles.menuBtn}
-          src={
-            menuOpen
-              ? getImageURL("nav/closeIcon.png")
-              : getImageURL("nav/menuIcon.png")
-          }
           onClick={() => setMenuOpen(!menuOpen)}
           alt="menu-button"
-        />
+        >MENU ✦</button>
         <ul
           className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
           onClick={() => setMenuOpen(false)}

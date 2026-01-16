@@ -70,3 +70,9 @@
   max-height: 20px;
   max-width: 20px;
 }
+
+@media screen and (max-width: 650px) {
+  .description {
+    font-size: var(--font-md);
+  }
+}
