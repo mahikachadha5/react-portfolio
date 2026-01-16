@@ -7,7 +7,7 @@ import CursorBlob from "./components/CursorBlob";
 import CustomCursor from "./components/CustomCursor";
 import ProjectDetail from "./components/ProjectDetail";
 import { Routes, Route } from "react-router-dom";
-// import About from "./components/About";
+import About from "./components/About";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
               <CursorBlob />
               <Navbar />
               <Hero />
-              {/* <About /> */}
+              <About />
               <Projects />
               <Contact />
             </>

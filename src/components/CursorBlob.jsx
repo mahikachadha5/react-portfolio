@@ -40,18 +40,18 @@ const CursorBlob = () => {
 
       if (distance < 300) {
         // Move away from cursor
-        const pushX = -(dx / distance) * 200;
-        const pushY = -(dy / distance) * 200;
+        const pushX = -(dx / distance) * 600;
+        const pushY = -(dy / distance) * 600;
         blob.style.transform = `translate(${pushX}px, ${pushY}px)`;
-        blob.style.opacity = "0.5";
+        blob.style.opacity = "0.6";
       } else {
         // Return closer to original position
         blob.style.transform = `translate(0px, 0px)`;
-        blob.style.opacity = "0.7";
+        blob.style.opacity = "0.8";
       }
 
       // Add transition for smooth movement
-      blob.style.transition = "transform 0.7s ease-out, opacity 0.3s ease-out";
+      blob.style.transition = "transform 1.2s ease-out, opacity 1s ease-out";
     };
 
     updateBlob(blob1Ref);

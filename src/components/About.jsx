@@ -36,16 +36,18 @@ export default function About() {
 
   return (
     <section id="about" className={`${styles.aboutContainer} code`}>
-      <h2>ABOUT ME</h2>
+      <h2 className={`${styles.header}`}>About Me</h2>
       <div className={`${styles.contentContainer} code`}>
         <div className={`${styles.textContainer} code`}>
-          {/* <img className={styles.image} src={getImageURL("/contact/me.png")} /> */}
           <p className={styles.description}>
-            I blend design, code, and cognitive science to build interfaces that
-            not only look good but are intuitive, fast, and user-first. With a
-            joint degree in Computer Science and Cognitive Psychology, I bring a
-            unique perspective to Software Engineering.
+            I design and build software with <strong>people</strong> in mind.<br /><br />
+            Backed by a joint degree in Computer Science and Cognitive Psychology, 
+            I focus on creating <strong>intuitive and thoughtful</strong> user experiences.
+            <br />
+            <br />
+            Prev @ Delsys, Calvin Klein & Tommy Hilfiger
           </p>
+          
         </div>
         <div className={`${styles.skillsContainer} code`}>
           {skills.map((group) => (

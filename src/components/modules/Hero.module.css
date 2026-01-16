@@ -3,24 +3,27 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5% 10%;
+  position: relative;
   z-index: 1;
-  height: 100vh;
+  min-height: 100vh;
 }
 
-.title {
-  font-weight: 200;
-  color: var(--color-text);
-  justify-content: center;
-  white-space: nowrap;
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  align-items: center;
 }
 
 .letter {
   display: inline-block;
-  font-size: var(--font-3xl);
+  font-family: var(--font-heading);
+  font-size: 96px;
   font-weight: 200;
   color: var(--color-primary);
   transition: transform 0.4s ease;
+  line-height: 1.2;
 }
 
 .letter:hover {
@@ -28,29 +31,40 @@
 }
 
 .description {
-  font-size: var(--font-xl);
+  font-size: var(--font-lg);
+  line-height: 1.2;
+  justify-content: center;
   text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.05em;
 }
 
 .button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--color-primary);
-  background-color: transparent;
-  border: 2px solid var(--color-primary);
-  border-radius: 30px;
-  text-decoration: none;
-  text-align: center;
-  transition: background-color 0.5s ease, color 0.3s ease;
+  position: absolute;
+  bottom: 2rem;
+  background: none;
+  border: none;
   cursor: pointer;
-  margin-top: 2rem;
+  padding: 4%;
+  font-size: var(--font-lg);
+  color: var(--color-primary);
+  animation: float 2.5s ease-in-out infinite;
 }
 
 .button:hover {
-  background-color: var(--color-primary);
-  color: var(--color-bg);
+  transform: rotate(90deg);
+}
+
+@keyframes float {
+  0% {
+    transform: rotate(90deg) translateX(0);
+  }
+  50% {
+    transform: rotate(90deg) translateX(8px);
+  }
+  100% {
+    transform: rotate(90deg) translateX(0);
+  }
 }
 
 @media screen and (max-width: 650px) {

@@ -92,7 +92,7 @@ export default function ProjectDetail() {
                 onClick={() => navigate("/")}
                 className={styles.backButton}
               >
-                ← Back to projects
+               ⥆⁀*•ˋ‧. ⊹ ₊ Back to projects
               </button>
             </div>
 
@@ -168,7 +168,7 @@ export default function ProjectDetail() {
                               key={index}
                               className={`${styles.iterationBlock} design `}
                             >
-                              <h4>{iteration.title}</h4>
+                              <h3>{iteration.title}</h3>
                               <img
                                 src={iteration.image}
                                 alt={iteration.title}
