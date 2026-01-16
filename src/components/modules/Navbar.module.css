@@ -39,9 +39,7 @@
 }
 
 .menuItems a:hover {
-  font-size: var(--font-sm);
   color: var(--color-primary);
-  letter-spacing: -0.05em;
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
 }
@@ -71,17 +69,23 @@
   .menuBtn {
     display: block;
     cursor: pointer;
+    font-size: var(--font-sm);
+    color: var(--color-text);
+    letter-spacing: -0.05em;
+    font-weight: var(--font-regular);
+    text-decoration: none;
+    border: none;
+    background: transparent;
   }
 
   .menuItems {
     display: none;
     flex-direction: column;
     align-items: left;
-    gap: 10px;
+    gap: 7px;
     border-radius: 5px;
-    background: var(--color-secondary);
-    padding: 14px 14px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    background: var(--color-bg);
+    padding: 10px 15px;
   }
 
   .menuOpen {

@@ -6,7 +6,7 @@ const CustomCursor = () => {
   const [cursorIcon, setCursorIcon] = useState("default");
 
   const cursorStyles = {
-    default: "✨",
+    default: "💜",
     link: "🚀",
     code: "💻",
     design: "🎨",
