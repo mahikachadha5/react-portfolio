@@ -129,7 +129,7 @@ export default function ProjectDetail() {
                 variants={itemVariants}
               >
                 <div className={styles.descriptionSection}>
-                  <h2 className={styles.sectionHeader}>Overview</h2>
+                  <h3 className={styles.sectionHeader}>Overview</h3>
                   <p className={styles.projectDescription}>
                     {longDesc || description}
                   </p>

@@ -31,10 +31,12 @@
 }
 
 .menuItems a {
-  font-size: var(--font-sm);
+  font-size: var(--size-xs);
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
   color: var(--color-text);
-  letter-spacing: -0.05em;
-  font-weight: var(--font-regular);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
   text-decoration: none;
 }
 
@@ -53,7 +55,7 @@
   .title {
     align-self: flex-start;
     margin-left: 0px;
-    font-size: var(--font-lg);
+    font-size: var(--size-body);
   }
 
   .menu {
@@ -69,10 +71,10 @@
   .menuBtn {
     display: block;
     cursor: pointer;
-    font-size: var(--font-sm);
+    font-size: var(--size-body);
     color: var(--color-text);
     letter-spacing: -0.05em;
-    font-weight: var(--font-regular);
+    font-weight: var(--weight-light);
     text-decoration: none;
     border: none;
     background: transparent;

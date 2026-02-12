@@ -11,8 +11,8 @@
 }
 
 .text {
-  max-width: 400px;
-  font-size: vars(--font-3xl);
+  max-width: 800px;
+  font-size: vars(--size-h1);
 }
 
 .links {

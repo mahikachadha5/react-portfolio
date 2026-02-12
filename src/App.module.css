@@ -18,22 +18,22 @@
 h1,
 .heading-xl {
   font-family: var(--font-heading);
-  font-size: var(--font-2xl);
-  font-weight: var(--font-bold);
+  font-size: var(--size-h1);
+  font-weight: var(--weight-medium);
 }
 
 h2,
 .heading-lg {
   font-family: var(--font-heading);
-  font-size: var(--font-2xl);
-  font-weight: var(--font-semibold);
+  font-size: var(--size-h2);
+  font-weight: var(--weight-medium);
 }
 
 h3,
 .heading-md {
   font-family: var(--font-heading);
-  font-size: var(--font-lg);
-  font-weight: var(--font-medium);
+  font-size: var(--size-h3);
+  font-weight: var(--weight-medium);
 }
 
 p,
@@ -42,7 +42,7 @@ li,
 a,
 div {
   font-family: var(--font-body);
-  font-size: var(--font-lg);
+  font-size: var(--size-body);
   color: var(--color-text);
   line-height: 1.6;
 }

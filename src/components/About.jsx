@@ -51,7 +51,7 @@ export default function About() {
         <div className={`${styles.skillsContainer}`}>
           {skills.map((group) => (
             <div key={group.category}>
-              <h3 className={styles.skillsHeader}>{group.category}</h3>
+              <h3>{group.category}</h3>
               <ul className={styles.skillsList}>
                 {group.items.map(({ label, icon }, index) => (
                   <li key={index} className={`${styles.skillItem} code`}>
