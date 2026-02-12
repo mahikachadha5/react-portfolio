@@ -1,8 +1,30 @@
-# React + Vite
+# mahikachadha.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio showcasing my work as a design-driven software engineer. 
 
-Currently, two official plugins are available:
+**[View Live →](https://mahikachadha.com)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack 
+
+- **Framework:** React + Vite
+- **Styling:** CSS Modules
+- **Deployment:** Vercel
+
+## Running Locally
+
+```bash
+# Clone the repository
+git clone https://github.com/mahikachadha/portfolio.git
+
+# Navigate to the directory
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+
+Built with love in 2025 — and iterated on ever since.
