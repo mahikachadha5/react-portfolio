@@ -18,7 +18,7 @@
 .letter {
   display: inline-block;
   font-family: var(--font-heading);
-  font-size: 80px;
+  font-size: 90px;
   color: var(--color-primary);
   transition: transform 0.4s ease;
   line-height: 1.2;
@@ -32,7 +32,6 @@
   font-size: var(--size-body);
   line-height: 1.2;
   font-weight: var(--weight-light);
-  letter-spacing: 0.05em;
 }
 
 .button {

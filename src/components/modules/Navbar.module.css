@@ -73,7 +73,6 @@
     cursor: pointer;
     font-size: var(--size-body);
     color: var(--color-text);
-    letter-spacing: -0.05em;
     font-weight: var(--weight-light);
     text-decoration: none;
     border: none;
