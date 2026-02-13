@@ -119,7 +119,7 @@ export default function ProjectDetail() {
               >
                 <div className={`${styles.skillsContainer} code `}>
                   {skills.map((skill, index) => (
-                    <span key={index} className={`${styles.skillTag} code `}>
+                    <span key={index} className={`${global["skill"]} code `}>
                       {skill}
                     </span>
                   ))}

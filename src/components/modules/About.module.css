@@ -39,7 +39,6 @@
 }
 
 .skillItem {
-  padding: 0.4rem 0.5rem;
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -47,12 +46,13 @@
   font-size: var(--size-xs);
   font-family: var(--font-body);
   font-weight: var(--weight-regular);
-  color: var(--color-primary);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
-  background: rgba(var(--color-glow-rgb), 0.08);
-  border: 1px solid rgba(var(--color-glow-rgb), 0.15);
-  border-radius: 2px;
+  padding: 5px 10px;
+  color: var(--color-glow);
+  background: rgba(131, 53, 143, 0.08);
+  border: 1px solid rgba(131, 53, 143, 0.12);
+  border-radius: 4px;
 }
 
 .skillItem:hover {
