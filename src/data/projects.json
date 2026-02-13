@@ -1,25 +1,35 @@
-[ 
-  {
+[ {
   "id": 0,
+  "name": "Self-Driving Agent from Scratch",
+  "description": "A from-scratch implementation of Deep Q-Network (DQN) that learns to drive in the CarRacing-v3 environment using only pixel input.",
+  "longDesc": "This project implements a Deep Q-Network agent from scratch using PyTorch to master the CarRacing-v3 environment from Gymnasium. The agent learns entirely from raw pixel input — receiving 96x96 RGB frames and deciding when to steer, accelerate, or brake. The implementation includes a CNN architecture that processes 4 stacked grayscale frames to detect motion, an experience replay buffer to break temporal correlation in training data, a target network for stable Q-value estimation, and epsilon-greedy exploration that decays over time. Key challenges included frame preprocessing (cropping, grayscale conversion, normalization), tuning hyperparameters like learning rate and epsilon decay, and implementing checkpoint saving to resume training across sessions. The project demonstrates understanding of core RL concepts including the Bellman equation, Q-learning, and the exploration-exploitation tradeoff.",
+  "skills": ["Python", "PyTorch", "Reinforcement Learning", "CNNs", "Computer Vision"],
+  "imageUrl": "/assets/projects/CarRacingProj.png",
+  "sourceCode": "comingsoon",
+  "clickable": false
+},
+  {
+  "id": 1,
   "name": "Split",
   "description": "A mobile-first bill splitting app that lets groups upload receipts, assign items, and instantly calculate who owes whom.",
   "longDesc": "Split is a product-focused web app designed to remove the friction from splitting group expenses. Users can upload a receipt photo or manually enter items, review and edit line items, add people to a group, and assign each item to one or more people. The app calculates per-person subtotals, proportionally distributes tax and tip, and generates a clear settlement summary showing who owes whom and how much. The project emphasizes clean UX flows, state management for complex shared data, and thoughtful edge-case handling (unassigned items, shared items, mobile responsiveness). It showcases end-to-end product thinking from user stories and MVP scoping through to front-end implementation and derived state calculations.",
-  "skills": ["TypeScript", "React", "Tailwind CSS", "Node.js", "State Management", "Product Design"],
+  "skills": ["TypeScript", "React", "Node.js", "Product Design"],
   "imageUrl": "/assets/projects/SplitProject.png",
-  "sourceCode": "comingsoon"
-},
-
-{
-    "id": 1,
-    "name": "Calibration Workflow Redesign",
-    "description": "Redesigned the sensor calibration workflow for EMG research software.",
-    "longDesc": "I redesigned an EMG calibration workflow at a global software company* specializing in wearable sensors, a critical step that allows researchers to normalize sensors to participants’ muscles for accurate study results. I overhauled the UX, UI, and user flows, introducing multi-sensor calibration to save researchers time while increasing consistency and reliability in their data collection. This project was completed in collaboration with a team of three, highlighting both coordination and design problem-solving in a fast-paced environment. *Project details and designs withheld for privacy.",
-    "skills": ["UI/UX Design", "Figma", "C#", ".NET / WPF", "User Flows", "Workflow Optimization"],
-    "imageUrl": "/assets/projects/CalibrationWorkflow.png",
-    "sourceCode": null
+  "sourceCode": "comingsoon",
+  "clickable": false
   },
   {
     "id": 2,
+    "name": "Calibration Workflow Redesign",
+    "description": "Redesigned the sensor calibration workflow for EMG research software.",
+    "longDesc": "I redesigned an EMG calibration workflow at a global software company* specializing in wearable sensors, a critical step that allows researchers to normalize sensors to participants' muscles for accurate study results. I overhauled the UX, UI, and user flows, introducing multi-sensor calibration to save researchers time while increasing consistency and reliability in their data collection. This project was completed in collaboration with a team of three, highlighting both coordination and design problem-solving in a fast-paced environment. *Project details and designs withheld for privacy.",
+    "skills": ["UI/UX Design", "Figma", "C#", ".NET / WPF", "User Flows", "Workflow Optimization"],
+    "imageUrl": "/assets/projects/CalibrationWorkflow.png",
+    "sourceCode": null,
+    "clickable": true
+  },
+  {
+    "id": 3,
     "name": "Echo",
     "description": "Analyzes user reviews for places with sentiment analysis.",
     "longDesc": "A React web app that displays insights on user reviews of a searched query. These insights include graphs with breakdowns of positive, negative, neutral reviews, sentiment over time, and an AI-generated summary of most recent reviews. The app helps users quickly understand public opinion about different places without sifting through hundreds of reviews. All information fetched from an external API.",
@@ -53,24 +63,27 @@
         "First project to integrate D3.js charts"
       ],
       "demoUrl": "https://youtu.be/JJpQ5CEmbBI"
-    }
+    },
+    "clickable": true
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "strategy.town",
     "description": "A project in which I extended current functionality with new user stories.",
     "longDesc": "The project extended existing single-player functionality to support real-time multiplayer interactions, user progress tracking, and personalized statistics dashboards. Players can track wins, streaks, and scores over time, adding a competitive and engaging layer to the games. The project demonstrates both front-end development skills and system design thinking required to manage multiplayer game state and user data.",
     "skills": ["TypeScript", "Node.js", "Mongo DB", "React"],
     "imageUrl": "/assets/projects/Strategy.Town.png",
-    "sourceCode": "https://github.com/neu-cs4530/summer25-project-summer25-project-binacle"
+    "sourceCode": "https://github.com/neu-cs4530/summer25-project-summer25-project-binacle",
+    "clickable": true
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "Travel Journal",
     "description": "Travel journal of my trips while studying abroad.",
     "longDesc": "This was my first solo React project, and a great way to compile my favorite memories and images from when I was studying abroad.",
     "skills": ["React", "Javascript", "CSS"],
     "imageUrl": "/assets/projects/TravelJournal.png",
-    "sourceCode": "https://v2.scrimba.com/s005kmodh3"
+    "sourceCode": "https://v2.scrimba.com/s005kmodh3",
+    "clickable": true
   }
 ]
