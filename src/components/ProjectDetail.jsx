@@ -89,7 +89,9 @@ export default function ProjectDetail() {
           >
             <div className={styles.navigation}>
               <button
-                onClick={() => navigate("/")}
+                onClick={() => {
+                  navigate("/", { state: { returnToProjectId: id } });
+                }}
                 className={styles.backButton}
               >
                ⥆⁀*•ˋ‧. ⊹ ₊ Back to projects
@@ -129,7 +131,7 @@ export default function ProjectDetail() {
                 variants={itemVariants}
               >
                 <div className={styles.descriptionSection}>
-                  <h2 className={styles.sectionHeader}>Overview</h2>
+                  <h3 className={styles.sectionHeader}>Overview</h3>
                   <p className={styles.projectDescription}>
                     {longDesc || description}
                   </p>

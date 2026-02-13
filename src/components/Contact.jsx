@@ -22,18 +22,21 @@ const contacts = [
 export default function Contact() {
   return (
     <footer id="contact" className={styles.contactSection}>
-      <div className={styles.text}>
-        <h1>Thanks for stopping by :)</h1>
+      <div className={styles.mainContent}>
+        <div className={styles.text}>
+          <h1>Thanks for the scroll!</h1>
+        </div>
+        <ul className={styles.links}>
+          {contacts.map(({ icon, link, alt }, index) => (
+            <li key={index} className={styles.link}>
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                <img src={getImageURL(icon)} alt={alt} />
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul className={styles.links}>
-        {contacts.map(({ icon, link, alt }, index) => (
-          <li key={index} className={styles.link}>
-            <a href={link} target="_blank" rel="noopener noreferrer">
-              <img src={getImageURL(icon)} alt={alt} />
-            </a>
-          </li>
-        ))}
-      </ul>
+      <p className={styles.copyright}>MADE WITH 💜 © 2026 MAHIKA CHADHA</p>
     </footer>
   );
 }

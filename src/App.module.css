@@ -4,7 +4,6 @@
   background-color: var(--color-bg);
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -18,22 +17,22 @@
 h1,
 .heading-xl {
   font-family: var(--font-heading);
-  font-size: var(--font-2xl);
-  font-weight: var(--font-bold);
+  font-size: var(--size-h1);
+  font-weight: var(--weight-medium);
 }
 
 h2,
 .heading-lg {
   font-family: var(--font-heading);
-  font-size: var(--font-2xl);
-  font-weight: var(--font-semibold);
+  font-size: var(--size-h2);
+  font-weight: var(--weight-medium);
 }
 
 h3,
 .heading-md {
   font-family: var(--font-heading);
-  font-size: var(--font-lg);
-  font-weight: var(--font-medium);
+  font-size: var(--size-h3);
+  font-weight: var(--weight-medium);
 }
 
 p,
@@ -42,14 +41,13 @@ li,
 a,
 div {
   font-family: var(--font-body);
-  font-size: var(--font-lg);
+  font-size: var(--size-body);
   color: var(--color-text);
   line-height: 1.6;
 }
 
 html,
 body {
-  overflow-x: hidden;
   max-width: 100vw;
   position: relative;
   scroll-behavior: smooth;

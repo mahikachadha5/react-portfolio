@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 5% 10%;
+  padding: 5% 5%;
   z-index: 1;
   min-width: 100%;
   min-height: 100vh;
@@ -23,17 +23,9 @@
 }
 
 .description {
-  font-size: var(--font-lg);
+  font-size: var(--size-body);
   line-height: 1.2;
-  font-weight: 300;
-  letter-spacing: 0.05em;
-}
-
-.skillsHeader {
-  font-family: var(--font-heading);
-  font-size: var(--font-xl);
-  font-weight: var(--font-semibold);
-  color: var(--color-text);
+  font-weight: var(--weight-light);
 }
 
 .skillsList {
@@ -47,19 +39,20 @@
 }
 
 .skillItem {
-  background-color: rgba(var(--color-glow-rgb), 0.2);
-  border: 1px solid rgba(var(--color-glow-rgb), 0.7);
-  border-radius: 3rem;
-  padding: 0.3rem 0.7rem;
-  font-size: var(--font-sm);
-  font-weight: 300;
-  letter-spacing: 0.05em;
+  padding: 0.4rem 0.5rem;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
+  transition: transform 0.3s ease;
+  font-size: var(--size-xs);
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
   color: var(--color-primary);
-  max-width: 150px;
-  transition: transform 0.2s ease;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  background: rgba(var(--color-glow-rgb), 0.08);
+  border: 1px solid rgba(var(--color-glow-rgb), 0.15);
+  border-radius: 2px;
 }
 
 .skillItem:hover {
@@ -73,6 +66,6 @@
 
 @media screen and (max-width: 650px) {
   .description {
-    font-size: var(--font-md);
+    font-size: var(--size-body);
   }
 }
