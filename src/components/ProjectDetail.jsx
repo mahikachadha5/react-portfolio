@@ -89,7 +89,9 @@ export default function ProjectDetail() {
           >
             <div className={styles.navigation}>
               <button
-                onClick={() => navigate("/")}
+                onClick={() => {
+                  navigate("/", { state: { returnToProjectId: id } });
+                }}
                 className={styles.backButton}
               >
                ⥆⁀*•ˋ‧. ⊹ ₊ Back to projects

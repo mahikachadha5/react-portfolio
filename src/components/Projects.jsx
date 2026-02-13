@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { getProjects } from "../utils";
 import styles from "./modules/Projects.module.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
@@ -10,6 +10,7 @@ export default function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const sectionRef = useRef(null);
+  const location = useLocation();
 
   const NAV_HEIGHT = 70;
   const SCROLL_PER_PROJECT = 900;
@@ -54,6 +55,24 @@ export default function Projects() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [projects]);
 
+  useEffect(() => {
+    if (projects.length === 0 || !location.state?.returnToProjectId) return;
+
+    const projectIndex = projects.findIndex(
+      (p) => p.id.toString() === location.state.returnToProjectId
+    );
+
+    if (projectIndex !== -1 && sectionRef.current) {
+      const sectionTop = sectionRef.current.getBoundingClientRect().top + window.scrollY;
+      const targetScroll = sectionTop - NAV_HEIGHT + (projectIndex * SCROLL_PER_PROJECT);
+
+      window.scrollTo({
+        top: targetScroll,
+        behavior: 'auto'
+      });
+    }
+  }, [projects, location]);
+
   const calculateSectionHeight = () => {
     if (projects.length === 0) return 'auto';
     const scrollRoom = (projects.length - 1) * SCROLL_PER_PROJECT;
@@ -91,15 +110,9 @@ export default function Projects() {
                     className={`${styles.titleRow} ${isActive ? styles.active : ''}`}
                   >
                     <span className={styles.number}>
-                      {String(index + 1).padStart(2, '0')}
+                      {String(index + 1).padStart(3, '0')}
                     </span>
-
-                    <Link
-                      to={`/projects/${project.id}`}
-                      className={styles.titleLink}
-                    >
-                      <h3 className={styles.title}>{project.name}</h3>
-                    </Link>
+                    <h3 className={styles.title}>{project.name}</h3>
                   </div>
                 );
               })}
@@ -127,12 +140,14 @@ export default function Projects() {
                   </div>
 
                   <div className={styles.buttons}>
-                    <Link
-                      to={`/projects/${projects[activeIndex].id}`}
-                      className={styles.viewLink}
-                    >
-                      Learn More →
-                    </Link>
+                    {projects[activeIndex].clickable ? (
+                      <Link
+                        to={`/projects/${projects[activeIndex].id}`}
+                        className={styles.viewLink}
+                      >
+                        Learn More
+                      </Link>
+                    ) : null}
 
                     {projects[activeIndex].sourceCode === "comingsoon" ? (
                       <span className={styles.comingSoon}>Coming soon</span>
@@ -143,7 +158,7 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         className={styles.codeLink}
                       >
-                        View code →
+                        View code
                       </a>
                     ) : null}
                   </div>
