@@ -52,24 +52,6 @@
   justify-content: center;
 }
 
-.skillTag {
-  padding: 0.4rem 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  transition: transform 0.3s ease;
-  font-size: var(--size-xs);
-  font-family: var(--font-body);
-  font-weight: var(--weight-regular);
-  color: var(--color-primary);
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  background: rgba(var(--color-glow-rgb), 0.08);
-  border: 1px solid rgba(var(--color-glow-rgb), 0.15);
-  border-radius: 2px;
-  
-}
-
 .heroImageContainer {
   width: 100%;
   margin: 0 auto 3rem;

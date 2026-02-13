@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { getProjects } from "../utils";
 import styles from "./modules/Projects.module.css";
+import global from "../App.module.css"
 import { Link, useLocation } from "react-router-dom";
 
 export default function Projects() {
@@ -135,7 +136,7 @@ export default function Projects() {
 
                   <div className={styles.skills}>
                     {projects[activeIndex].skills.map((skill, i) => (
-                      <span key={i} className={styles.skill}>{skill}</span>
+                      <span key={i} className={`${global["skill"]}`}>{skill}</span>
                     ))}
                   </div>
 

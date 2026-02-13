@@ -62,3 +62,17 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+.skill {
+  font-family: var(--font-body);
+  font-size: var(--size-xs);
+  font-weight: var(--weight-regular);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  padding: 6px 12px;
+  color: var(--color-glow);
+  background: rgba(131, 53, 143, 0.08);
+  border: 1px solid rgba(131, 53, 143, 0.12);
+  border-radius: 4px;
+}
+
