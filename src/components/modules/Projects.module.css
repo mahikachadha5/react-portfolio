@@ -8,12 +8,10 @@
   display: flex;
   flex-direction: column;
   padding: 0 5%;
-  max-width: 1400px;
-  margin: 0 auto;
 }
 
 .header {
-  padding: 32px 0 24px;
+  padding: 40px 0 24px;
   flex-shrink: 0;
 }
 
@@ -187,7 +185,7 @@
   font-family: var(--font-body);
   font-size: var(--size-xs);
   font-weight: var(--weight-medium);
-  color: #999;
+  color: var(--color-glow);
   letter-spacing: var(--tracking-wide);
   font-style: italic;
   text-transform: uppercase;
@@ -203,6 +201,27 @@
 
 .error {
   color: #c0392b;
+}
+
+.mobileList {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding-bottom: 40px;
+}
+
+.mobileCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobileCardHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(91, 17, 102, 0.09);
 }
 
 @media screen and (max-width: 1000px) {

@@ -28,16 +28,6 @@
   "sourceCode": "https://github.com/mahikachadha5/cartpole_v1_stable_baselines",
   "clickable": true
 },
-  {
-  "id": 3,
-  "name": "Split",
-  "description": "A mobile-first bill splitting app that lets groups upload receipts, assign items, and instantly calculate who owes whom.",
-  "longDesc": "Split is a product-focused web app designed to remove the friction from splitting group expenses. Users can upload a receipt photo or manually enter items, review and edit line items, add people to a group, and assign each item to one or more people. The app calculates per-person subtotals, proportionally distributes tax and tip, and generates a clear settlement summary showing who owes whom and how much. The project emphasizes clean UX flows, state management for complex shared data, and thoughtful edge-case handling (unassigned items, shared items, mobile responsiveness). It showcases end-to-end product thinking from user stories and MVP scoping through to front-end implementation and derived state calculations.",
-  "skills": ["TypeScript", "React", "Node.js", "Product Design"],
-  "imageUrl": "/assets/projects/SplitProject.png",
-  "sourceCode": "comingsoon",
-  "clickable": false
-  },
 
   {
     "id": 4,
