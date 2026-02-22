@@ -9,12 +9,21 @@ export default function Projects() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const sectionRef = useRef(null);
   const location = useLocation();
 
   const NAV_HEIGHT = 70;
   const SCROLL_PER_PROJECT = 900;
+
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 1000px)');
+    const handler = (e) => setIsMobile(e.matches);
+    setIsMobile(mq.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
 
   useEffect(() => {
     const loadProjects = async () => {
@@ -85,11 +94,11 @@ export default function Projects() {
       id="projects"
       ref={sectionRef}
       className={styles.section}
-      style={{ height: loading ? 'auto' : calculateSectionHeight() }}
+      style={{ height: loading || isMobile ? 'auto' : calculateSectionHeight() }}
     >
       <div
         className={styles.sticky}
-        style={{ top: NAV_HEIGHT }}
+        style={{ top: isMobile ? 'auto' : NAV_HEIGHT, position: isMobile ? 'static' : 'sticky', height: isMobile ? 'auto' : undefined }}
       >
         <header className={styles.header}>
           <h2>Projects</h2>
@@ -98,7 +107,41 @@ export default function Projects() {
         {loading && <div className={styles.loading}>Loading...</div>}
         {error && <div className={styles.error}>{error}</div>}
 
-        {!loading && !error && (
+        {!loading && !error && isMobile ? (
+          <div className={styles.mobileList}>
+            {projects.map((project, index) => (
+              <div key={project.id} className={styles.mobileCard}>
+                <div className={styles.mobileCardHeader}>
+                  <span className={styles.number}>{String(index + 1).padStart(3, '0')}</span>
+                  <h3 className={styles.title}>{project.name}</h3>
+                </div>
+                <div className={styles.imageWrap}>
+                  <img src={project.imageUrl} alt={project.name} className={styles.image} />
+                </div>
+                <p className={styles.description}>{project.description}</p>
+                <div className={styles.skills}>
+                  {project.skills.map((skill, i) => (
+                    <span key={i} className={`${global["skill"]}`}>{skill}</span>
+                  ))}
+                </div>
+                <div className={styles.buttons}>
+                  {project.clickable ? (
+                    <Link to={`/projects/${project.id}`} className={styles.viewLink}>
+                      Learn More
+                    </Link>
+                  ) : null}
+                  {project.sourceCode === "comingsoon" ? (
+                    <span className={styles.comingSoon}>Coming soon</span>
+                  ) : project.sourceCode ? (
+                    <a href={project.sourceCode} target="_blank" rel="noopener noreferrer" className={styles.codeLink}>
+                      View code
+                    </a>
+                  ) : null}
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : !loading && !error ? (
           <div className={styles.layout}>
 
             <div className={styles.titlesList}>
@@ -168,7 +211,7 @@ export default function Projects() {
             </div>
 
           </div>
-        )}
+        ) : null}
       </div>
     </section>
   );
