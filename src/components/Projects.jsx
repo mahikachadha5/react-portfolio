@@ -125,7 +125,11 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className={styles.buttons}>
-                  {project.clickable ? (
+                  {project.demoUrl ? (
+                    <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className={styles.viewLink}>
+                      Try it!
+                    </a>
+                  ) : project.clickable ? (
                     <Link to={`/projects/${project.id}`} className={styles.viewLink}>
                       Learn More
                     </Link>
@@ -184,7 +188,16 @@ export default function Projects() {
                   </div>
 
                   <div className={styles.buttons}>
-                    {projects[activeIndex].clickable ? (
+                    {projects[activeIndex].demoUrl ? (
+                      <a
+                        href={projects[activeIndex].demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.viewLink}
+                      >
+                        Try It!
+                      </a>
+                    ) : projects[activeIndex].clickable ? (
                       <Link
                         to={`/projects/${projects[activeIndex].id}`}
                         className={styles.viewLink}

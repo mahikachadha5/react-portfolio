@@ -39,15 +39,8 @@ export default function ProjectDetail() {
     skills,
     longDesc,
     description,
-    caseStudy,
   } = project;
 
-  const problem = caseStudy?.problem;
-  const goal = caseStudy?.goal;
-  const approach = caseStudy?.approach;
-  const outcomes = caseStudy?.outcomes || [];
-  const designIterations = caseStudy?.designIterations || [];
-  const demoUrl = caseStudy?.demoUrl;
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -136,84 +129,6 @@ export default function ProjectDetail() {
                     {longDesc || description}
                   </p>
                 </div>
-
-                {caseStudy && (
-                  <div>
-                    {problem && (
-                      <>
-                        <h3 className={styles.sectionHeader}>The Problem</h3>
-                        <p className={styles.projectDescription}>{problem}</p>
-                      </>
-                    )}
-                    {goal && (
-                      <>
-                        <h3 className={styles.sectionHeader}>The Goal</h3>
-                        <p className={styles.projectDescription}>{goal}</p>
-                      </>
-                    )}
-
-                    {approach && (
-                      <>
-                        <h3 className={styles.sectionHeader}>The Approach</h3>
-                        <p className={styles.projectDescription}>{approach}</p>
-                      </>
-                    )}
-
-                    {designIterations && designIterations.length > 0 && (
-                      <>
-                        <h3 className={`${styles.sectionHeader} design `}>
-                          Design Iterations
-                        </h3>
-                        <div className={`${styles.designIterations} design `}>
-                          {designIterations?.map((iteration, index) => (
-                            <div
-                              key={index}
-                              className={`${styles.iterationBlock} design `}
-                            >
-                              <h3>{iteration.title}</h3>
-                              <img
-                                src={iteration.image}
-                                alt={iteration.title}
-                                className={`${styles.iterationImage} design `}
-                              />
-                              <p className={`${styles.iterationNotes} design `}>
-                                {iteration.notes}
-                              </p>
-                            </div>
-                          ))}
-                        </div>
-                      </>
-                    )}
-
-                    {outcomes && outcomes.length > 0 && (
-                      <>
-                        <h3 className={styles.sectionHeader}>Outcomes</h3>
-                        {project.caseStudy.outcomes && (
-                          <ul className={styles.outcomesList}>
-                            {outcomes.map((outcome, index) => (
-                              <li className={styles.outcome} key={index}>
-                                {outcome}
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </>
-                    )}
-
-                    {demoUrl && (
-                      <div className={styles.linkSection}>
-                        <a
-                          href={demoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={styles.projectLink}
-                        >
-                          View Demo →
-                        </a>
-                      </div>
-                    )}
-                  </div>
-                )}
 
                 {sourceCode && (
                   <div className={styles.linkSection}>
