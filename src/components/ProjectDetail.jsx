@@ -30,6 +30,7 @@ export default function ProjectDetail() {
   }, []);
 
   const project = projects.find((p) => p.id.toString() === id);
+  if (projects.length === 0) return null;
   if (!project) return <div>Project not found</div>;
 
   const {
@@ -40,6 +41,8 @@ export default function ProjectDetail() {
     longDesc,
     description,
   } = project;
+
+  console.log('imageUrl', imageUrl)
 
 
   const containerVariants = {
@@ -103,7 +106,16 @@ export default function ProjectDetail() {
                 className={styles.heroImageContainer}
                 variants={itemVariants}
               >
-                <img src={imageUrl} alt={name} className={styles.heroImage} />
+              <video
+                    key={imageUrl}
+                    className={styles.heroImage}
+                    src={imageUrl}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  />
+               
               </motion.div>
 
               <motion.div

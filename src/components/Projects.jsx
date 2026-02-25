@@ -4,6 +4,8 @@ import styles from "./modules/Projects.module.css";
 import global from "../App.module.css"
 import { Link, useLocation } from "react-router-dom";
 
+const isVideo = (url) => url && /\.(mp4|webm|ogg)$/i.test(url);
+
 export default function Projects() {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -116,7 +118,18 @@ export default function Projects() {
                   <h3 className={styles.title}>{project.name}</h3>
                 </div>
                 <div className={styles.imageWrap}>
-                  <img src={project.imageUrl} alt={project.name} className={styles.image} />
+                  {isVideo(project.imageUrl) ? (
+                    <video
+                      className={styles.image}
+                      src={project.imageUrl}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                    />
+                  ) : (
+                    <img src={project.imageUrl} alt={project.name} className={styles.image} />
+                  )}
                 </div>
                 <p className={styles.description}>{project.description}</p>
                 <div className={styles.skills}>
@@ -170,11 +183,22 @@ export default function Projects() {
               {projects[activeIndex] && (
                 <div className={styles.projectContent}>
                   <div className={styles.imageWrap}>
-                    <img
-                      src={projects[activeIndex].imageUrl}
-                      alt={projects[activeIndex].name}
-                      className={styles.image}
-                    />
+                    {isVideo(projects[activeIndex].imageUrl) ? (
+                      <video
+                        className={styles.image}
+                        src={projects[activeIndex].imageUrl}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                      />
+                    ) : (
+                      <img
+                        src={projects[activeIndex].imageUrl}
+                        alt={projects[activeIndex].name}
+                        className={styles.image}
+                      />
+                    )}
                   </div>
 
                   <p className={styles.description}>
@@ -195,7 +219,7 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         className={styles.viewLink}
                       >
-                        Try It!
+                        Try It
                       </a>
                     ) : projects[activeIndex].clickable ? (
                       <Link
