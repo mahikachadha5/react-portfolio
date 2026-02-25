@@ -25,6 +25,3 @@ npm install
 # Start development server
 npm run dev
 ```
-
-
-Built with love in 2025 — and iterated on ever since.
