@@ -17,8 +17,8 @@
 
 .layout {
   display: grid;
-  grid-template-columns: minmax(300px, 2fr) minmax(400px, 2.5fr);
-  gap: 60px;
+  grid-template-columns: minmax(200px, 1.5fr) minmax(400px, 3fr);
+  gap: 48px;
   flex: 1;
   min-height: 0;
   align-items: start;
@@ -64,7 +64,7 @@
 
 .title {
   font-family: var(--font-heading);
-  font-size: clamp(20px, 2.2vw, 28px);
+  font-size: clamp(18px, 2vw, 24px);
   font-weight: var(--weight-regular);
   color: var(--color-text);
   margin: 0;
@@ -113,7 +113,7 @@
 .image {
   width: 100%;
   height: auto;
-  max-height: 50vh;
+  max-height: 57vh;
   object-fit: contain;
   object-position: top;
   display: block;
