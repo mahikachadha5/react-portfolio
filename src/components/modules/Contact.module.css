@@ -18,8 +18,8 @@
 }
 
 .text {
-  max-width: 800px;
-  font-size: vars(--size-h1);
+  font-size: var(--size-h1);
+  text-align: center;
 }
 
 .links {
