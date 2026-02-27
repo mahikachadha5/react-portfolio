@@ -23,7 +23,6 @@
 }
 
 .links {
-  display: flex;
   flex-direction: row;
   gap: 12px;
   list-style: none;
