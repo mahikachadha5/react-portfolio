@@ -5,7 +5,7 @@
     "description": "AI-powered review intelligence for an restaurant, café, or venue.",
     "longDesc": "Echo is a full-stack web app that transforms public reviews into actionable insights about any place. Search any restaurant, hotel, or venue and get Claude's distilled take, sentiment scoring with trend analysis, topic breakdowns by mention frequency, visit timing recommendations, vibe and tone profiling, and insider tips — all without reading a single review. Built with React, Node.js, and the Anthropic and Google Places APIs.",
     "skills": ["React", "JavaScript", "CSS", "Node.js", "Anthropic API", "Google Maps API"],
-    "imageUrl": "/assets/projects/echo_vid.mp4",
+    "imageUrl": "/assets/projects/echo_carbone.mp4",
     "sourceCode": "https://github.com/mahikachadha5/echo",
     "clickable": true,
     "demoUrl": "https://echoreviews.netlify.app"
