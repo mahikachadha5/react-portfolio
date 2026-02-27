@@ -23,8 +23,8 @@ export default function Contact() {
   return (
     <footer id="contact" className={styles.contactSection}>
       <div className={styles.mainContent}>
-        <div className={styles.text}>
-          <h1>Thanks for the scroll!</h1>
+        <div >
+          <h1 className={styles.text}>Thanks for the scroll!</h1>
         </div>
         <ul className={styles.links}>
           {contacts.map(({ icon, link, alt }, index) => (
