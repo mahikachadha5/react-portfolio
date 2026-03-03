@@ -49,7 +49,7 @@
 
 .number {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: var(--size-xs);
   font-weight: var(--weight-regular);
   color: var(--color-text);
   opacity: 0.5;
