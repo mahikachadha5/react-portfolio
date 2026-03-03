@@ -21,8 +21,8 @@ function App() {
               <CursorBlob />
               <Navbar />
               <Hero />
-              <About />
               <Projects />
+              <About />
               <Contact />
             </>
           }
