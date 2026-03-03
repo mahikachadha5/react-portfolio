@@ -17,7 +17,7 @@ export default function Projects() {
   const location = useLocation();
 
   const NAV_HEIGHT = 70;
-  const SCROLL_PER_PROJECT = 900;
+  const SCROLL_PER_PROJECT = 700;
 
   useEffect(() => {
     const mq = window.matchMedia('(max-width: 1000px)');
@@ -103,7 +103,7 @@ export default function Projects() {
         style={{ top: isMobile ? 'auto' : NAV_HEIGHT, position: isMobile ? 'static' : 'sticky', height: isMobile ? 'auto' : undefined }}
       >
         <header className={styles.header}>
-          <h2>Projects</h2>
+          {/* <h2>Projects</h2> */}
         </header>
 
         {loading && <div className={styles.loading}>Loading...</div>}
@@ -134,7 +134,7 @@ export default function Projects() {
                 <p className={styles.description}>{project.description}</p>
                 <div className={styles.skills}>
                   {project.skills.map((skill, i) => (
-                    <span key={i} className={`${global["skill"]}`}>{skill}</span>
+                    <span key={i} className={`${global.skill}`}>{skill}</span>
                   ))}
                 </div>
                 <div className={styles.buttons}>
@@ -173,7 +173,10 @@ export default function Projects() {
                     <span className={styles.number}>
                       {String(index + 1).padStart(3, '0')}
                     </span>
-                    <h3 className={styles.title}>{project.name}</h3>
+                    <div className={styles.titleContent}>
+                      <h3 className={styles.title}>{project.name}</h3>
+                      {isActive && <p className={styles.description}>{project.description}</p>}
+                    </div>
                   </div>
                 );
               })}
@@ -201,13 +204,9 @@ export default function Projects() {
                     )}
                   </div>
 
-                  <p className={styles.description}>
-                    {projects[activeIndex].description}
-                  </p>
-
                   <div className={styles.skills}>
                     {projects[activeIndex].skills.map((skill, i) => (
-                      <span key={i} className={`${global["skill"]}`}>{skill}</span>
+                      <span key={i} className={`${global.skill}`}>{skill}</span>
                     ))}
                   </div>
 

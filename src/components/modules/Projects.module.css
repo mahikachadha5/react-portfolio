@@ -11,11 +11,10 @@
 }
 
 .header {
-  padding: 40px 0 24px;
-  flex-shrink: 0;
 }
 
 .layout {
+  padding: 5% 0;
   display: grid;
   grid-template-columns: minmax(200px, 1.5fr) minmax(400px, 3fr);
   gap: 48px;
@@ -60,6 +59,12 @@
 
 .titleLink {
   text-decoration: none;
+}
+
+.titleContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .title {
@@ -113,7 +118,7 @@
 .image {
   width: 100%;
   height: auto;
-  max-height: 52vh;
+  max-height: 65vh;
   object-fit: contain;
   object-position: top;
   display: block;
@@ -133,7 +138,14 @@
 .skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
+}
+
+.skills :global(.skill) {
+  font-size: 10px;
+  padding: 3px 8px;
+  background: rgba(131, 53, 143, 0.03);
+  border-color: rgba(131, 53, 143, 0.07);
 }
 
 .buttons {
