@@ -3,35 +3,20 @@ import { getImageURL } from "../utils";
 
 export default function About() {
   const skills = [
-    {
-      category: "Languages",
-      items: [
-        { label: "JavaScript", icon: "skills/js.png" },
-        { label: "TypeScript", icon: "skills/ts.png" },
-        { label: "Python", icon: "skills/python.png" },
-        { label: "Java", icon: "skills/java.png" },
-        { label: "C#", icon: "skills/csharp.png" },
-        { label: "XAML", icon: "skills/xaml.png" },
-        { label: "HTML", icon: "skills/html.png" },
-        { label: "CSS", icon: "skills/css.png" },
-      ],
-    },
-    {
-      category: "Frameworks & Libraries",
-      items: [
-        { label: "React", icon: "skills/react.png" },
-        { label: "Node.js", icon: "skills/node.png" },
-      ],
-    },
-    {
-      category: "Other Tools",
-      items: [
-        { label: "Git", icon: "skills/git.png" },
-        { label: "Figma", icon: "skills/figma.png" },
-        { label: "Firebase", icon: "skills/firebase.png" },
-        { label: "MongoDB", icon: "skills/mongo.png" },
-      ],
-    },
+        { id: 0, label: "JavaScript", icon: "skills/js.png" },
+        { id: 1,label: "TypeScript", icon: "skills/ts.png" },
+        { id: 2,label: "Python", icon: "skills/python.png" },
+        { id: 3,label: "Java", icon: "skills/java.png" },
+        { id: 4,label: "C#", icon: "skills/csharp.png" },
+        { id: 5,label: "XAML", icon: "skills/xaml.png" },
+        { id: 0,label: "HTML", icon: "skills/html.png" },
+        { id: 6,label: "CSS", icon: "skills/css.png" },
+        { id: 7,label: "React", icon: "skills/react.png" },
+        { id: 8,label: "Node.js", icon: "skills/node.png" },
+        { id: 9,label: "Git", icon: "skills/git.png" },
+        { id: 10,label: "Figma", icon: "skills/figma.png" },
+        { id: 11,label: "Firebase", icon: "skills/firebase.png" },
+        { id: 12,label: "MongoDB", icon: "skills/mongo.png" },
   ];
 
   return (
@@ -49,12 +34,11 @@ export default function About() {
           
         </div>
         <div className={`${styles.skillsContainer}`}>
-          {skills.map((group) => (
-            <div key={group.category}>
-              <h3>{group.category}</h3>
+              <h3>Skills</h3>
               <ul className={styles.skillsList}>
-                {group.items.map(({ label, icon }, index) => (
-                  <li key={index} className={`${styles.skillItem} code`}>
+                
+                {skills.map(({ id, label, icon }) => (
+                  <li key={id} className={`${styles.skillItem} code`}>
                     <img
                       className={styles.skillImg}
                       src={getImageURL(icon)}
@@ -65,8 +49,7 @@ export default function About() {
                 ))}
               </ul>
             </div>
-          ))}
-        </div>
+          
     </section>
   );
 }
