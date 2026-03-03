@@ -84,8 +84,8 @@
     gap: 0.5rem;
   }
 
-  .letter {
-    font-size: var(--size-h1);
+  .title {
+    line-height: 1;
   }
 
   .descriptionsContainer {

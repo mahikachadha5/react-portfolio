@@ -69,7 +69,7 @@
 
 .title {
   font-family: var(--font-heading);
-  font-size: clamp(18px, 2vw, 24px);
+  font-size: var(--size-h3);
   font-weight: var(--weight-regular);
   color: var(--color-text);
   margin: 0;
@@ -260,9 +260,5 @@
 @media screen and (max-width: 600px) {
   .sticky {
     padding: 0 20px;
-  }
-
-  .title {
-    font-size: 16px;
   }
 }
