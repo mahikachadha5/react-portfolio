@@ -13,7 +13,7 @@
   {
     "id": 1,
     "name": "Self-Driving Agent from Scratch",
-    "description": "A from-scratch implementation of Deep Q-Network (DQN) that learns to drive in the CarRacing-v3 environment using only pixel input.",
+    "description": "Trained a DQN agent to drive using only raw pixels as input.",
     "longDesc": "This project implements a Deep Q-Network agent from scratch using PyTorch to solve the CarRacing-v3 environment from Gymnasium. The agent learns entirely from raw pixel input, receiving 96x96 RGB frames and deciding when to steer, accelerate, or brake. The implementation includes a CNN architecture that processes 4 stacked gray scale frames to detect motion, an experience replay buffer to break correlation in training data, a target network for stable Q-value estimation, and epsilon-greedy exploration that decays over time. Key challenges included frame preprocessing (cropping, gray scale conversion, normalization), tuning hyperparameters like learning rate and epsilon decay, and implementing checkpoint saving to resume training across sessions. The project demonstrates understanding of core RL concepts including the Bellman equation, Q-learning, and the exploration-exploitation tradeoff.",
     "skills": ["Python", "PyTorch", "Reinforcement Learning", "CNNs", "Computer Vision"],
     "imageUrl": "/assets/projects/car_vid.mp4",
@@ -23,7 +23,7 @@
   {
     "id": 2,
     "name": "Balancing Act",
-    "description": "A reinforcement learning agent trained to balance a pole on a moving cart, achieving perfect scores using Proximal Policy Optimization.",
+    "description": "Trained an PPO agent to perfectly balance a pole on a moving cart.",
     "longDesc": "This project explores the fundamentals of reinforcement learning by training an agent to solve the classic CartPole control problem. Using Stable Baselines3 and OpenAI Gymnasium, I implemented a PPO (Proximal Policy Optimization) agent that learns to balance a pole on a cart by applying left or right forces. The agent observes cart position, cart velocity, pole angle, and pole angular velocity, then decides which direction to push. Before training, the agent averaged around 20 reward per episode with inconsistent, poor performance. After 20,000 timesteps of training, the agent achieved perfect 500/500 scores across all evaluation episodes — effectively solving the environment. This project served as my introduction to RL concepts including policy gradients, reward signals, and the exploration-exploitation tradeoff.",
     "skills": ["Python", "Stable Baselines3", "Reinforcement Learning", "Gymnasium", "PPO"],
     "imageUrl": "/assets/projects/cartpole_vid.mp4",
@@ -33,7 +33,7 @@
   {
     "id": 3,
     "name": "strategy.town",
-    "description": "A project in which I extended current functionality with new user stories.",
+    "description": "A real-time multiplayer game platform.",
     "longDesc": "The project extended existing single-player functionality to support real-time multiplayer interactions, user progress tracking, and personalized statistics dashboards. Players can track wins, streaks, and scores over time, adding a competitive and engaging layer to the games. The project demonstrates both front-end development skills and system design thinking required to manage multiplayer game state and user data.",
     "skills": ["TypeScript", "Node.js", "Mongo DB", "React"],
     "imageUrl": "/assets/projects/strategytown.png",
