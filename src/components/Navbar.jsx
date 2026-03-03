@@ -4,7 +4,7 @@ import styles from "./modules/Navbar.module.css";
 import { getImageURL } from "../utils";
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  // const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className={styles.navbar}>
@@ -13,13 +13,16 @@ export default function Navbar() {
         className={styles.title}
         src={getImageURL("nav/icon.svg")}
       />
-
+      
+    {/* 
       <div className={styles.menu}>
+        
+        
         <button
           className={styles.menuBtn}
           onClick={() => setMenuOpen(!menuOpen)}
           alt="menu-button"
-        >MENU ✦</button>
+        >MENU ✦</button> 
         <ul
           className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
           onClick={() => setMenuOpen(false)}
@@ -33,8 +36,9 @@ export default function Navbar() {
           <li>
             <a href="#contact">CONTACT</a>
           </li>
-        </ul>
+        </ul> 
       </div>
+      */}
     </nav>
   );
 }

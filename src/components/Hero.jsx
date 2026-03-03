@@ -1,8 +1,6 @@
 import styles from "./modules/Hero.module.css";
 
 export default function Hero() {
-  const name = "Mahika Chadha";
-
   const handleScrollToSection = () => {
     const targetElement = document.getElementById("about");
     if (targetElement) {
@@ -16,22 +14,26 @@ export default function Hero() {
   return (
     <section className={styles.container}>
       <div className={styles.heroContent}>
-        <h1 className={styles.title}>
-        {name.split("").map((char, index) => (
-          <span key={index} className={styles.letter}>
-            {char == " " ? "\u00A0" : char}
-          </span>
-        ))}
-        </h1>
-
-        <div className={`${styles.description}`}>
-          Design-Driven Software Engineer
+        <h1 className={styles.title}>Mahika Chadha{" "}
+          <span className={`${styles.title} ${styles.spin}`}>✧</span>
+          <span className={`${styles.title} ${styles.stretch}`}>˖</span>
+          °.
+          </h1>
+        <div className={styles.descriptionsContainer}>
+          <div className={styles.mainDescription}>
+            Design engineer who thinks in systems and psychology. I care deeply about craft and making experiences memorable.            
+        </div>
+        <div className={styles.description}>
+            Background in Computer Science + Cognitive Psychology. Born in New Jersey, short stints in SF and Madrid, now back in New Jersey. Previously @ <a className={styles.link} href="https://www.calvinklein.us/en">Calvin Klein</a> and <a className={styles.link} href="https://delsys.com/">Delsys</a>.
+            Currently building RL agents that can see and playing around with D3.js. Self-proclaimed food critic, dog lover, avid tennis player and Alcaraz fan, and I lift heavy weights.
+        </div>
+        
         </div>
       </div>
     
-      <button onClick={handleScrollToSection} className={styles.button}>
-        . ݁₊ ⊹ ˖ .‧ˋ°•*⁀➵
-      </button>
+      {/* <button onClick={handleScrollToSection} className={styles.button}>
+        See my work . ݁₊ ⊹ ˖ .‧ˋ°•*⁀➵
+      </button> */}
     </section>
   );
 }
