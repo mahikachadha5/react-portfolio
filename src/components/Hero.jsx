@@ -24,8 +24,14 @@ export default function Hero() {
             Design engineer who thinks in systems and psychology. I care deeply about craft and making experiences memorable.            
         </div>
         <div className={styles.description}>
-            Background in Computer Science + Cognitive Psychology. Born in New Jersey, short stints in SF and Madrid, now back in New Jersey. Previously @ <a className={styles.link} href="https://www.calvinklein.us/en">Calvin Klein</a> and <a className={styles.link} href="https://delsys.com/">Delsys</a>.
-            Currently building RL agents that can see and playing around with D3.js. Self-proclaimed food critic, dog lover, avid tennis player and Alcaraz fan, and I lift heavy weights.
+            Background in Computer Science + Cognitive Psychology. Born in New Jersey, short stints in SF and Madrid, now back in New Jersey.
+            <br />
+            <br />
+             Previously @ <a className={styles.link} href="https://www.calvinklein.us/en">Calvin Klein</a> and <a className={styles.link} href="https://delsys.com/">Delsys</a>.
+            Currently building RL agents that can see and playing around with D3.js. 
+            <br />
+            <br />
+            Self-proclaimed food critic, dog lover, avid tennis player and Alcaraz fan, and I lift heavy weights.
         </div>
         
         </div>
