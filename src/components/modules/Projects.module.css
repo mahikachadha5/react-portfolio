@@ -4,7 +4,7 @@
 
 .sticky {
   position: sticky;
-  height: calc(100vh - 70px);
+  height: calc(100vh);
   display: flex;
   flex-direction: column;
   padding: 0 5%;
@@ -86,7 +86,6 @@
   height: 100%;
   display: flex;
   align-items: start;
-  overflow: hidden;
 }
 
 .projectContent {
