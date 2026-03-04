@@ -31,9 +31,8 @@ export default function Hero() {
             Currently building RL agents that can see and playing around with D3.js. 
             <br />
             <br />
-            Self-proclaimed food critic, dog lover, avid tennis player and Alcaraz fan, and I lift heavy weights.
-        </div>
-        
+            Outside of work, I'm a self-proclaimed food critic, dog lover, avid tennis player, Alcaraz enthusiast, and devoted gym-goer.       
+             </div>
         </div>
       </div>
     
