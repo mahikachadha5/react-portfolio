@@ -36,9 +36,16 @@ export default function Hero() {
         </div>
       </div>
     
-      {/* <button onClick={handleScrollToSection} className={styles.button}>
-        See my work . ݁₊ ⊹ ˖ .‧ˋ°•*⁀➵
-      </button> */}
+      <button
+        className={styles.scrollArrow}
+        onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+        aria-label="Scroll to projects"
+      >
+        <svg width="28" height="15" viewBox="0 0 21 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.5 0.5L10.5 10.5" stroke="currentColor" strokeLinecap="round"/>
+          <path d="M20.5 0.5L10.5 10.5" stroke="currentColor" strokeLinecap="round"/>
+        </svg>
+      </button>
     </section>
   );
 }

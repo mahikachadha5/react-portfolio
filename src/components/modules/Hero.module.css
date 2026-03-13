@@ -77,6 +77,29 @@
   font-weight: var(--weight-light);
 }
 
+.scrollArrow {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  opacity: 0.5;
+  animation: bounce 2s ease-in-out infinite;
+  padding: 0;
+  display: flex;
+}
+
+.scrollArrow:hover {
+  opacity: 1;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
 @media screen and (max-width: 650px) {
   .nameContainer {
     flex-direction: column;
@@ -85,6 +108,7 @@
   }
 
   .title {
+    font-size: 52px;
     line-height: 1;
   }
 

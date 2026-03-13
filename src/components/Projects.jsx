@@ -103,7 +103,7 @@ export default function Projects() {
         style={{ top: isMobile ? 'auto' : NAV_HEIGHT, position: isMobile ? 'static' : 'sticky', height: isMobile ? 'auto' : undefined }}
       >
         <header className={styles.header}>
-          {/* <h2>Projects</h2> */}
+          <h2>Projects</h2>
         </header>
 
         {loading && <div className={styles.loading}>Loading...</div>}

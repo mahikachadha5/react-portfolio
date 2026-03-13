@@ -11,10 +11,11 @@
 }
 
 .header {
+  padding: 2% 0 0 0;
 }
 
 .layout {
-  padding: 5% 0;
+  padding: 1.5% 0;
   display: grid;
   grid-template-columns: minmax(200px, 2fr) minmax(400px, 3fr);
   gap: 48px;
@@ -238,6 +239,10 @@
 @media screen and (max-width: 1000px) {
   .sticky {
     padding: 0 32px;
+  }
+
+  .header {
+    padding-top: 60px;
   }
 
   .layout {
