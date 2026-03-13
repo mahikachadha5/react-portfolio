@@ -13,7 +13,7 @@
 .title {
   width: 30px;
   height: 30px;
-  color: var(--color-primary);
+  color: var(--color-text);
 }
 
 .menu {
@@ -41,7 +41,7 @@
 }
 
 .menuItems a:hover {
-  color: var(--color-primary);
+  color: var(--color-text);
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
 }

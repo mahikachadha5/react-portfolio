@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
-import styles from "./modules/CursorBlob.module.css";
+import styles from "./modules/OldCursorBlob.module.css";
 
-const CursorBlob = () => {
+const OldCursorBlob = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const blob1Ref = useRef(null);
@@ -70,4 +70,4 @@ const CursorBlob = () => {
   );
 };
 
-export default CursorBlob;
+export default OldCursorBlob;

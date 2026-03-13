@@ -3,11 +3,12 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import CursorBlob from "./components/CursorBlob";
+import OldCursorBlob from "./components/OldCursorBlob";
 import CustomCursor from "./components/CustomCursor";
 import ProjectDetail from "./components/ProjectDetail";
 import { Routes, Route } from "react-router-dom";
 import About from "./components/About";
+import Background from "./components/Background";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
           element={
             <>
               <CustomCursor />
-              <CursorBlob />
+              {/* <CursorBlob /> */}
+              <Background />
               <Navbar />
               <Hero />
               <Projects />

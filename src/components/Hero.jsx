@@ -29,9 +29,9 @@ export default function Hero() {
             <br />
              Previously @ <a className={styles.link} href="https://www.calvinklein.us/en">Calvin Klein</a> and <a className={styles.link} href="https://delsys.com/">Delsys</a>.
             Currently building RL agents that can see and playing around with D3.js. 
-            <br />
-            <br />
-            Outside of work, I'm a self-proclaimed food critic, dog lover, avid tennis player, Alcaraz enthusiast, and devoted gym-goer.       
+            {/* <br /> */}
+            {/* <br /> */}
+            {/* Outside of work, I'm a self-proclaimed food critic, dog lover, avid tennis player, Alcaraz enthusiast, and devoted gym-goer.        */}
              </div>
         </div>
       </div>

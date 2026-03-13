@@ -20,7 +20,7 @@
   font-family: var(--font-heading);
   font-size: 96px;
   padding: 20px 0;
-  color: var(--color-primary);
+  color: var(--color-text);
   line-height: 1.2;
 }
 
