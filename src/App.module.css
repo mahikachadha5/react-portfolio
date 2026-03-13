@@ -69,7 +69,7 @@ body {
   font-weight: var(--weight-light);
   letter-spacing: var(--tracking-wide);
   padding: 4px 8px;
-  color: var(--color-glow);
+  color: var(--color-primary);
   background: rgba(131, 53, 143, 0.03);
   border: 1px solid rgba(131, 53, 143, 0.12);
   border-radius: 4px;

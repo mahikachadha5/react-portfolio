@@ -1,13 +1,28 @@
 :root {
-  /* Base Colors */
-  --color-bg: #e6e6e6;
-  --color-text: rgb(21,22,22);
+  /* Base Colors — light theme defaults */
+  --color-bg: #cccbcb;
+  --color-text: rgb(21, 22, 22);
+  --color-text-muted: rgba(21, 22, 22, 0.5);
+  --color-surface: rgba(255, 255, 255, 0.6);
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-primary: #5B1166;}
+
+[data-theme="dark"] {
+  --color-bg: #0e0e0e;
+  --color-text: rgb(240, 240, 240);
+  --color-text-muted: rgba(240, 240, 240, 0.5);
+  --color-surface: rgba(255, 255, 255, 0.05);
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-primary: #CE53E0;
+}
+
+:root {
 
   /* Accent Colors */
-  --color-primary: #5B1166;
+
   --color-secondary: #341539;
   --color-glow:#83358F;
-  --color-fade:#CE53E0; 
+
   --color-glow-rgb: 131, 53, 143;
 
   /* Fonts */

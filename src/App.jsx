@@ -9,36 +9,41 @@ import ProjectDetail from "./components/ProjectDetail";
 import { Routes, Route } from "react-router-dom";
 import About from "./components/About";
 import Background from "./components/Background";
+import { ThemeProvider } from "./context/ThemeContext";
+import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
   return (
-    <div className={styles.App}>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <CustomCursor />
-              {/* <CursorBlob /> */}
-              <Background />
-              <Navbar />
-              <Hero />
-              <Projects />
-              {/* <About /> */}
-              <Contact />
-            </>
-          }
-        />
-        <Route
-          path="/projects/:id"
-          element={
-            <>
-              <ProjectDetail /> <CustomCursor />
-            </>
-          }
-        />
-      </Routes>
-    </div>
+    <ThemeProvider>
+      <div className={styles.App}>
+        {/* <ThemeToggle /> */}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <CustomCursor />
+                {/* <CursorBlob /> */}
+                <Background />
+                <Navbar />
+                <Hero />
+                <Projects />
+                {/* <About /> */}
+                <Contact />
+              </>
+            }
+          />
+          <Route
+            path="/projects/:id"
+            element={
+              <>
+                <ProjectDetail /> <CustomCursor />
+              </>
+            }
+          />
+        </Routes>
+      </div>
+    </ThemeProvider>
   );
 }
 
