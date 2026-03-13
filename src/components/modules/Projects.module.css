@@ -16,7 +16,7 @@
 .layout {
   padding: 5% 0;
   display: grid;
-  grid-template-columns: minmax(200px, 1.5fr) minmax(400px, 3fr);
+  grid-template-columns: minmax(200px, 2fr) minmax(400px, 3fr);
   gap: 48px;
   flex: 1;
   min-height: 0;

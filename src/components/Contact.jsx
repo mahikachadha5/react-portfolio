@@ -1,42 +1,30 @@
 import styles from "./modules/Contact.module.css";
-import { getImageURL } from "../utils";
 
 const contacts = [
-  {
-    icon: "contact/emailIcon.svg",
-    link: "mailto:chadhama5@gmail.com",
-    alt: "email icon",
-  },
-  {
-    icon: "contact/linkedinIcon.svg",
-    link: "https://www.linkedin.com/in/mahika-chadha-43b299211/",
-    alt: "linkedin icon",
-  },
-  {
-    icon: "contact/githubIcon.svg",
-    link: "https://github.com/mahikachadha5",
-    alt: "github icon",
-  },
+  { label: "EMAIL", link: "mailto:chadhama5@gmail.com" },
+  { label: "LINKEDIN", link: "https://www.linkedin.com/in/mahika-chadha-43b299211/" },
+  { label: "GITHUB", link: "https://github.com/mahikachadha5" },
 ];
 
 export default function Contact() {
   return (
     <footer id="contact" className={styles.contactSection}>
       <div className={styles.mainContent}>
-        <div >
-          <h1 className={styles.text}>Thanks for the scroll!</h1>
+        <div>
+          <h1 className={styles.text}>Let's work together</h1>
         </div>
+      </div>
+      <div className={styles.footer}>
+        <p className={styles.copyright}>© 2026</p>
         <ul className={styles.links}>
-          {contacts.map(({ icon, link, alt }, index) => (
+          {contacts.map(({ label, link }, index) => (
             <li key={index} className={styles.link}>
-              <a href={link} target="_blank" rel="noopener noreferrer">
-                <img src={getImageURL(icon)} alt={alt} />
-              </a>
+              <a href={link} target="_blank" rel="noopener noreferrer">{label}</a>
+              {index < contacts.length - 1 && <span className={styles.dot}></span>}
             </li>
           ))}
         </ul>
       </div>
-      <p className={styles.copyright}>MADE WITH 💜 © 2026 MAHIKA CHADHA</p>
     </footer>
   );
 }
