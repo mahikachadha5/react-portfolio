@@ -1,6 +1,6 @@
 :root {
   /* Base Colors — light theme defaults */
-  --color-bg: #cccbcb;
+  --color-bg: #eeeae8;
   --color-text: rgb(21, 22, 22);
   --color-text-muted: rgba(21, 22, 22, 0.5);
   --color-surface: rgba(255, 255, 255, 0.6);

@@ -9,7 +9,7 @@ export default function GrainBackground() {
 
   // Top blob: travels top-right → bottom-left by end of projects (0.4)
   const topX = useTransform(scrollYProgress, breakpoints, [0, -300, -500, 100]);
-  const topY = useTransform(scrollYProgress, breakpoints, [0, 300, 300, 0]);
+  const topY = useTransform(scrollYProgress, breakpoints, [0, 100, 100, 0]);
   const topScale = useTransform(scrollYProgress, breakpoints, [1, 1.3, 0.85, 1.1]);
   const topRadius = useTransform(
     scrollYProgress,
@@ -18,8 +18,8 @@ export default function GrainBackground() {
   );
 
   // Bottom blob
-  const bottomX = useTransform(scrollYProgress, breakpoints, [0, 600, 600, -0]);
-  const bottomY = useTransform(scrollYProgress, breakpoints, [0, 100, -300, 0]);
+  const bottomX = useTransform(scrollYProgress, breakpoints, [0, 800, 900, 0]);
+  const bottomY = useTransform(scrollYProgress, breakpoints, [0, 100, 0, 0]);
   const bottomScale = useTransform(scrollYProgress, breakpoints, [1, 0.75, 1.4, 0.9]);
   const bottomRadius = useTransform(
     scrollYProgress,
@@ -32,10 +32,14 @@ export default function GrainBackground() {
       <motion.div
         className={styles.blobTop}
         style={{ x: topX, y: topY, scale: topScale, borderRadius: topRadius }}
+        animate={{ rotate: 360 }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
       />
       <motion.div
         className={styles.blobBottom}
         style={{ x: bottomX, y: bottomY, scale: bottomScale, borderRadius: bottomRadius }}
+        animate={{ rotate: -360 }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
       />
       <div className={styles.grain} />
     </div>
