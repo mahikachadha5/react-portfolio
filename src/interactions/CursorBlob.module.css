@@ -1,0 +1,55 @@
+.blobsContainer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  filter: blur(50px);
+  will-change: transform, opacity;
+}
+
+.blob1 {
+  top: 10%;
+  left: 10%;
+  background: radial-gradient(
+    circle,
+    var(--color-glow) 80%,
+    var(--color-fade) 80%
+  );
+}
+
+.blob2 {
+  top: 60%;
+  left: 5%;
+  background: radial-gradient(
+    circle,
+    var(--color-glow) 80%,
+    var(--color-fade) 80%
+  );
+}
+
+.blob3 {
+  top: 55%;
+  left: 55%;
+  background: radial-gradient(
+    circle,
+    var(--color-glow) 80%,
+    var(--color-fade) 80%
+  );
+}
+
+.blob4 {
+  top: 5%;
+  left: 60%;
+  background: radial-gradient(
+    circle,
+    var(--color-glow) 80%,
+    var(--color-fade) 80%
+  );
+}

@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
-import styles from "./modules/OldCursorBlob.module.css";
+import styles from "./CursorBlob.module.css";
 
-const OldCursorBlob = () => {
+const OldCursorBlob = ({ isActive }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const blob1Ref = useRef(null);
@@ -10,6 +10,8 @@ const OldCursorBlob = () => {
   const blob4Ref = useRef(null);
 
   useEffect(() => {
+    if (!isActive) return;
+
     const handleMouseMove = (e) => {
       setMousePosition({
         x: e.clientX,
@@ -22,9 +24,25 @@ const OldCursorBlob = () => {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  }, [isActive]);
 
   useEffect(() => {
+    const resetBlob = (blobRef) => {
+      if (!blobRef.current) return;
+      const blob = blobRef.current;
+      blob.style.transform = `translate(0px, 0px)`;
+      blob.style.opacity = "0.8";
+      blob.style.transition = "transform 1.2s ease-out, opacity 1s ease-out";
+    };
+
+    if (!isActive) {
+      resetBlob(blob1Ref);
+      resetBlob(blob2Ref);
+      resetBlob(blob3Ref);
+      resetBlob(blob4Ref);
+      return;
+    }
+
     const updateBlob = (blobRef) => {
       if (!blobRef.current) return;
 
@@ -58,7 +76,7 @@ const OldCursorBlob = () => {
     updateBlob(blob2Ref);
     updateBlob(blob3Ref);
     updateBlob(blob4Ref);
-  }, [mousePosition]);
+  }, [mousePosition, isActive]);
 
   return (
     <div className={styles.blobsContainer}>
