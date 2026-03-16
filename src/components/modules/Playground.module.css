@@ -1,0 +1,141 @@
+.container {
+  padding: 5% 5%;
+  z-index: 5001;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.backWrapper {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.back {
+  font-family: var(--font-heading);
+  font-size: var(--size-body);
+  color: var(--color-text);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+}
+
+.back:hover {
+  color: var(--color-primary);
+}
+
+.header {
+  margin-top: 32px;
+  margin-bottom: 48px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 72px;
+  font-weight: var(--weight-regular);
+  color: var(--color-text);
+  line-height: 1.1;
+  margin: 0 0 12px 0;
+  letter-spacing: var(--tracking-tight);
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  font-weight: var(--weight-light);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Grid ──────────────────────────────────────────────────────────────────── */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ── Card ──────────────────────────────────────────────────────────────────── */
+
+.card {
+  position: relative;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.cardContent {
+  flex: 1;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px;
+  /* Contain position:fixed children (e.g. blob overlays) within the card */
+  transform: translateZ(0);
+  position: relative;
+}
+
+.sourceLink {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-family: var(--font-body);
+  font-size: var(--size-xs);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  letter-spacing: var(--tracking-wide);
+  transition: opacity 0.2s ease, color 0.2s ease;
+  z-index: 1;
+}
+
+.sourceLink:hover {
+  color: var(--color-text);
+}
+
+.cardFooter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 14px 16px;
+  z-index: 1;
+}
+
+.cardTitle {
+  font-size: var(--size-body);
+}
+
+.cardDescription {
+  font-family: var(--font-body);
+  font-size: var(--size-xs);
+  font-weight: var(--weight-light);
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────────── */
+
+@media screen and (max-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .title {
+    font-size: 44px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
