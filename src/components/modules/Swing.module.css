@@ -1,0 +1,29 @@
+.swingWrapper {
+          position: absolute;
+          top: 0;
+          right: 80px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          transform-origin: top center;
+          text-decoration: none;
+          cursor: pointer;
+          will-change: transform;
+        }
+
+        .swingChain {
+          display: block;
+          will-change: transform;
+        }
+
+        .swingSeat {
+          display: block;
+          margin-top: -2px;
+          will-change: transform;
+        }
+
+
+
+        .swingWrapper:hover  {
+          color: #7c3aed;
+        }
