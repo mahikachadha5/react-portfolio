@@ -77,7 +77,6 @@ export default function Playground() {
           <h2>My Playground</h2>
           <p className={styles.subtitle}>
             Interactions I&apos;ve built and things I&apos;ve been exploring. 
-            <em> More coming soon.</em>
           </p>
         </motion.div>
 
