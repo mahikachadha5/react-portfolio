@@ -11,9 +11,10 @@ import CursorBlob from "../interactions/CursorBlob"
 // const interactions = [
 //   { id: 1, title: "My Thing", description: "What it does.", component: MyThing, githubUrl: "https://github.com/..." },
 // ];
-const interactions = [{
-  id: 1, title: "Moving Blobs", description: "Something", component: CursorBlob, githubUrl: "https://github.com/"
-}];
+// const interactions = [{
+//   id: 1, title: "Moving Blobs", description: "Something", component: CursorBlob, githubUrl: "https://github.com/"
+// }];
+const interactions = [];
 // ─────────────────────────────────────────────────────────────────────────────
 
 function PlaygroundCard({ title, component: Component, githubUrl }) {
@@ -80,9 +81,12 @@ export default function Playground() {
           </p>
         </motion.div>
 
+        <em>Coming soon.</em>
+
         {interactions.length > 0 && (
           <motion.div variants={item} className={styles.grid}>
             {interactions.map((interaction) => (
+              
               <PlaygroundCard key={interaction.id} {...interaction} />
             ))}
           </motion.div>
