@@ -1,13 +1,14 @@
 .navbar {
   position: fixed;
-  top: 0;
+  top: max(0px, env(safe-area-inset-top));
   padding: 3% 5%;
   transition: transform 0.3s ease-in-out;
-  z-index: 3000;
+  z-index: 4;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  
 }
 
 .title {

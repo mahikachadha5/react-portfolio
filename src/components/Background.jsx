@@ -29,7 +29,7 @@ export default function GrainBackground() {
 
   return (
     <div className={styles.background}>
-      <motion.div
+      {/* <motion.div
         className={styles.blobTop}
         style={{ x: topX, y: topY, scale: topScale, borderRadius: topRadius }}
         animate={{ rotate: 360 }}
@@ -40,7 +40,7 @@ export default function GrainBackground() {
         style={{ x: bottomX, y: bottomY, scale: bottomScale, borderRadius: bottomRadius }}
         animate={{ rotate: -360 }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-      />
+      /> */}
       <div className={styles.grain} />
     </div>
   );

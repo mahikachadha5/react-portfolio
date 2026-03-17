@@ -1,29 +1,18 @@
-.swingWrapper {
-          position: absolute;
-          top: 0;
-          right: 80px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          transform-origin: top center;
-          text-decoration: none;
-          cursor: pointer;
-          will-change: transform;
-        }
+.swingAnchor {
+  position: fixed;
+  top: -50px;
+  right: 5%;
+  z-index: 3001;
+}
 
-        .swingChain {
-          display: block;
-          will-change: transform;
-        }
+.swingPivot {
+  transform-origin: 50% 0%;
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
 
-        .swingSeat {
-          display: block;
-          margin-top: -2px;
-          will-change: transform;
-        }
-
-
-
-        .swingWrapper:hover  {
-          color: #7c3aed;
-        }
+.swingAnchor { cursor: pointer; }

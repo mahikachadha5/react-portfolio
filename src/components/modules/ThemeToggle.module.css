@@ -1,6 +1,6 @@
 .toggle {
   position: fixed;
-  top: 1.25rem;
+  top: max(0px, env(safe-area-inset-top));
   right: 1.5rem;
   z-index: 4000;
   background: var(--color-surface);

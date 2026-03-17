@@ -16,6 +16,7 @@
 
 h1,
 .heading-xl {
+  text-wrap: balance;
   font-family: var(--font-heading);
   font-size: var(--size-h1);
   font-weight: var(--weight-medium);
@@ -23,6 +24,7 @@ h1,
 
 h2,
 .heading-lg {
+  text-wrap: balance;
   font-family: var(--font-heading);
   font-size: var(--size-h2);
   font-weight: var(--weight-medium);

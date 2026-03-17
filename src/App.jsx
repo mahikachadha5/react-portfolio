@@ -83,7 +83,7 @@ function AppRoutes() {
           position: "fixed",
           inset: 0,
           backgroundColor: "#0e0e0e",
-          zIndex: 5000,
+          zIndex: 5,
           pointerEvents: "none",
         }}
         initial={false}
@@ -96,7 +96,7 @@ function AppRoutes() {
         }}
         transition={
           overlayActive || isPlayground
-            ? { duration: 0.9, ease: [0.76, 0, 0.24, 1] }
+            ? { duration: 0.6, ease: "easeOut" }
             : { duration: 0.4, ease: "easeOut" }
         }
       />

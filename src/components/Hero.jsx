@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <section className={styles.container}>
       <motion.div className={styles.heroContent} variants={container} initial="initial" animate="animate">
-        <motion.h1 className={styles.title} variants={item}>
+        <motion.h1 className={styles.title} variants={item} whileInView>
           Mahika Chadha{" "}
           <span className={`${styles.title} ${styles.spin}`}>✧</span>
           <span className={`${styles.title} ${styles.stretch}`}>˖</span>

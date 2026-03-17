@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import s from "./modules/Swing.module.css";
 
 export default function Swing() {
   const pivotRef = useRef(null);
@@ -30,27 +31,8 @@ export default function Swing() {
 
   return (
     <a>
-      <style>{`
-        .swing-anchor {
-          position: fixed;
-          top: -30px;
-          right: 100px;
-          z-index: 3001;
-        }
-        .swing-pivot {
-          transform-origin: 50% 0%;
-          will-change: transform;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          text-decoration: none;
-          cursor: pointer;
-        }
-        .swing-anchor { cursor: pointer; }
-      `}</style>
-
       <div
-        className="swing-anchor"
+        className={s.swingAnchor}
         onMouseEnter={() => {
           stateRef.current.velocity += 0.01;
           window.dispatchEvent(new CustomEvent("swing-hover-enter"));
@@ -59,7 +41,7 @@ export default function Swing() {
         onClick={() => window.dispatchEvent(new CustomEvent("navigate-playground"))}
       >
         <div
-          className="swing-pivot"
+          className={s.swingPivot}
           ref={pivotRef}
         >
           {/* Ropes */}
