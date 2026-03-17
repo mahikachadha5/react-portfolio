@@ -4,6 +4,7 @@ import { useState } from "react";
 import Background from "./Background";
 import styles from "./modules/Playground.module.css";
 import CursorBlob from "../interactions/CursorBlob"
+import HalftoneSphere from "../interactions/HalftoneSphere"
 
 // ─── Add interactions here ────────────────────────────────────────────────────
 // import MyThing from "../interactions/MyThing";
@@ -14,10 +15,12 @@ import CursorBlob from "../interactions/CursorBlob"
 // const interactions = [{
 //   id: 1, title: "Moving Blobs", description: "Something", component: CursorBlob, githubUrl: "https://github.com/"
 // }];
-const interactions = [];
+const interactions = [{
+  id: 1, title: "Halftone Orb", component: HalftoneSphere
+}];
 // ─────────────────────────────────────────────────────────────────────────────
 
-function PlaygroundCard({ title, component: Component, githubUrl }) {
+function PlaygroundCard({ title, component: Component }) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -79,9 +82,6 @@ export default function Playground() {
             Interactions I&apos;ve built and things I&apos;ve been exploring. 
           </p>
         </motion.div>
-
-        <em>Coming soon.</em>
-
         {interactions.length > 0 && (
           <motion.div variants={item} className={styles.grid}>
             {interactions.map((interaction) => (

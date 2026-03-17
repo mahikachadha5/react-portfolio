@@ -112,6 +112,12 @@
 
 .cardTitle {
   font-size: var(--size-body);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.card:hover .cardTitle {
+  opacity: 1;
 }
 
 .cardDescription {
