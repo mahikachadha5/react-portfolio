@@ -57,13 +57,11 @@ function AppRoutes() {
             path="/"
             element={
               <PageTransition>
-                {/* <CursorBlob /> */}
                 <Background />
                 <Swing />
                 <Navbar />
                 <Hero />
                 <Projects />
-                {/* <About /> */}
                 <Contact />
               </PageTransition>
             }
@@ -93,7 +91,7 @@ function AppRoutes() {
           clipPath: (overlayActive || isPlayground)
             ? "circle(150% at 100% 0%)"
             : swingHovered
-              ? "circle(3% at 100% 0%)"
+              ? "circle(0% at 100% 0%)"
               : "circle(0% at 100% 0%)",
         }}
         transition={

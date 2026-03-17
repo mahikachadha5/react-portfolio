@@ -22,6 +22,7 @@
   padding: 20px 0;
   color: var(--color-text);
   line-height: 1.2;
+  text-wrap: balance;
 }
 
 .stretch {
@@ -62,6 +63,7 @@
   font-size: var(--size-h3);
   font-weight: var(--weight-light);
   line-height: 1.2;
+  text-wrap: pretty;
 }
 
 .description {
@@ -69,6 +71,7 @@
   font-size: 1.05rem;
   line-height: 1.4;
   font-weight: var(--weight-light);
+  text-wrap: pretty;
 }
 
 .link {

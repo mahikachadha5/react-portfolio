@@ -73,7 +73,7 @@
 }
 
 .titleLink:hover .title {
-  color: var(--color-glow);
+  color: var(--color-text);
 }
 
 .contentArea {
@@ -127,6 +127,7 @@
   color: #555;
   line-height: 1.7;
   margin: 0;
+  text-wrap: pretty;
 }
 
 .skills {
@@ -172,7 +173,7 @@
   font-size: var(--size-xs);
   font-weight: var(--weight-medium);
   letter-spacing: var(--tracking-wide);
-  color: var(--color-glow);
+  color: var(--color-text);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -183,15 +184,11 @@
   text-decoration: underline;
 }
 
-.codeLink {
-  color: var(--color-glow);
-}
-
 .comingSoon {
   font-family: var(--font-body);
   font-size: var(--size-xs);
   font-weight: var(--weight-medium);
-  color: var(--color-glow);
+  color: var(--color-text);
   letter-spacing: var(--tracking-wide);
   font-style: italic;
   text-transform: uppercase;

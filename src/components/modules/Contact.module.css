@@ -21,6 +21,7 @@
 .text {
   font-size: var(--size-h1);
   text-align: left;
+  text-wrap: balance;
 }
 
 .links {
