@@ -63,12 +63,12 @@
 
 .card {
   position: relative;
+  z-index: 0;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.03);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   transition: border-color 0.2s ease;
 }
 
@@ -94,7 +94,7 @@
   color: var(--color-text-muted);
   text-decoration: none;
   letter-spacing: var(--tracking-wide);
-  transition: opacity 0.2s ease, color 0.2s ease;
+  transition: opacity 1s ease, color 1s ease;
   z-index: 1;
 }
 
@@ -113,11 +113,12 @@
 .cardTitle {
   font-size: var(--size-body);
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.4s ease;
 }
 
 .card:hover .cardTitle {
   opacity: 1;
+  
 }
 
 .cardDescription {
@@ -126,6 +127,51 @@
   font-weight: var(--weight-light);
   color: var(--color-text-muted);
   line-height: 1.4;
+}
+
+/* ── Info ───────────────────────────────────────────────────────────────────── */
+
+.infoButton {
+  position: absolute;
+  bottom: 14px;
+  left: 16px;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+  letter-spacing: var(--tracking-wide);
+  font-size: var(--size-xs);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  z-index: 2;
+}
+
+.infoButton:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: var(--color-text);
+}
+
+.infoPanel {
+  position: absolute;
+  bottom: 44px;
+  left: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-family: var(--font-body);
+  font-size: var(--size-xs);
+  font-weight: var(--weight-light);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  z-index: 1000;
 }
 
 /* ── Responsive ────────────────────────────────────────────────────────────── */

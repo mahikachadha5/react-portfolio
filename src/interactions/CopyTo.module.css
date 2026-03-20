@@ -1,0 +1,76 @@
+.button {
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    font-weight: var(--weight-light);
+    letter-spacing: var(--tracking-wide);
+    transition: opacity 0.2s ease;
+}
+
+.button:hover {
+    opacity: 0.6;
+}
+
+.clip {
+    display: block;
+    overflow: hidden;
+    height: 1.5em;
+    line-height: 1.4em;
+}
+
+.row {
+    display: flex;
+}
+
+.letter {
+    display: inline-block;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(0) scale(1);}
+    to   { transform: translateY(-1.5em) scale(0.9); }
+}
+
+.up {
+    animation: slideUp 0.3s ease forwards;
+    animation-delay: calc(var(--i) * var(--step));
+}
+
+@keyframes slideBack {
+    from { transform: translateY(-1.5em) scale(0.9); }
+    to   { transform: translateY(0) scale(1); }
+}
+
+.down {
+    animation: slideBack 0.3s ease forwards;
+    animation-delay: calc(var(--i) * var(--step));
+}
+
+.comparison {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comparisonRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.badge {
+    font-family: var(--font-body);
+    font-size: var(--size-xs);
+    opacity: 0.35;
+    width: 12px;
+}
+
+.upPrincipled {
+    animation: slideUp 0.13s cubic-bezier(0.4, 0, 1, 1) forwards;
+    animation-delay: calc(var(--i) * var(--step));
+}
+
+.downPrincipled {
+    animation: slideBack 0.32s cubic-bezier(0, 0, 0.2, 1) forwards;
+    animation-delay: calc(var(--i) * var(--step));
+}
