@@ -5,7 +5,7 @@ import Background from "./Background";
 import styles from "./modules/Playground.module.css";
 import CursorBlob from "../interactions/CursorBlob"
 import HalftoneSphere from "../interactions/HalftoneSphere"
-import CursorText from "../interactions/CursorText";
+// import CursorText from "../interactions/CursorText";
 import CopyTo from "../interactions/CopyTo"
 
 const interactions = [
