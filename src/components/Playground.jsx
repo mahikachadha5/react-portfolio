@@ -3,15 +3,17 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import Background from "./Background";
 import styles from "./modules/Playground.module.css";
-import CursorBlob from "../interactions/CursorBlob"
 import HalftoneSphere from "../interactions/HalftoneSphere"
 // import CursorText from "../interactions/CursorText";
+// import CursorBlob from "../interactions/CursorBlob"
 import CopyTo from "../interactions/CopyTo"
+import GridBackground from "../interactions/GridBackground"
 
 const interactions = [
   { id: 1, title: "Halftone Orb", component: HalftoneSphere },
 // { id: 2, title: "Cursor Effects", component: CursorText },
   { id: 3, title: "Copy To", component: CopyTo, info: "Custom cubic bezier curves make exits snap away (0.4, 0, 1, 1) and entries decelerate into place (0, 0, 0.2, 1). The same curve both ways feels mechanical." },
+  { id: 4, title: "Grid Background", component: GridBackground },
 ];
 
 function PlaygroundCard({ title, component: Component, info }) {
