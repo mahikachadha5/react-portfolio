@@ -8,12 +8,14 @@ import HalftoneSphere from "../interactions/HalftoneSphere"
 // import CursorBlob from "../interactions/CursorBlob"
 import CopyTo from "../interactions/CopyTo"
 import GridBackground from "../interactions/GridBackground"
+import GradientSwoop from "../interactions/GradientSwoop"
 
 const interactions = [
   { id: 1, title: "Halftone Orb", component: HalftoneSphere },
 // { id: 2, title: "Cursor Effects", component: CursorText },
   { id: 3, title: "Copy To", component: CopyTo, info: "Custom cubic bezier curves make exits snap away (0.4, 0, 1, 1) and entries decelerate into place (0, 0, 0.2, 1). The same curve both ways feels mechanical." },
   { id: 4, title: "Grid Background", component: GridBackground },
+  { id: 5, title: "Gradient Swoop", component: GradientSwoop },
 ];
 
 function PlaygroundCard({ title, component: Component, info }) {
