@@ -1,4 +1,5 @@
 import styles from "./App.module.css";
+import { Databuddy } from '@databuddy/sdk/react';
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
@@ -110,6 +111,15 @@ function App() {
       <div className={styles.App}>
         {/* <ThemeToggle /> */}
         <AppRoutes />
+        <Databuddy
+          clientId="f7b7f055-316a-4034-9ac3-063e3642b217"
+          trackHashChanges={true}
+          trackAttributes={true}
+          trackOutgoingLinks={true}
+          trackInteractions={true}
+          trackWebVitals={true}
+          trackErrors={true}
+        />
       </div>
     </ThemeProvider>
   );
