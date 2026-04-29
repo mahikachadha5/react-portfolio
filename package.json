@@ -16,6 +16,7 @@
     "@react-three/drei": "^9.122.0",
     "@react-three/fiber": "^8.18.0",
     "@react-three/postprocessing": "^2.19.1",
+    "d3-geo": "^3.1.1",
     "framer-motion": "^12.10.0",
     "locomotive-scroll": "^4.1.4",
     "postprocessing": "^6.38.3",
@@ -23,7 +24,9 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.6.2",
     "react-simple-typewriter": "^5.0.1",
-    "three": "^0.168.0"
+    "three": "^0.168.0",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
