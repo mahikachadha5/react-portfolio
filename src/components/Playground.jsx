@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { useState, useEffect } from "react";
 import Background from "./Background";
 import styles from "./modules/Playground.module.css";
 import HalftoneSphere from "../interactions/HalftoneSphere"
@@ -20,19 +20,27 @@ const interactions = [
   { id: 5, title: "Gradient Swoop", component: GradientSwoop },
 ];
 
-function PlaygroundCard({ title, component: Component, info }) {
+const spring = { type: "spring", stiffness: 500, damping: 38 };
+
+function PlaygroundCard({ id, title, component: Component, info, onExpand, isExpanded }) {
   const [hovered, setHovered] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
 
   return (
-    <div
+    <motion.div
+      layoutId={`card-${id}`}
       className={styles.card}
       style={{
         borderColor: hovered ? "rgba(255,255,255,0.15)" : "rgba(255,255,255,0.08)",
-        zIndex: showInfo ? 10 : undefined,
+        opacity: isExpanded ? 0 : 1,
+        pointerEvents: isExpanded ? "none" : "auto",
+        cursor: "pointer",
       }}
+      transition={shouldReduceMotion ? { duration: 0 } : spring}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={() => onExpand(id)}
     >
       <div className={styles.cardContent}>
         <Component isActive={hovered} />
@@ -51,7 +59,7 @@ function PlaygroundCard({ title, component: Component, info }) {
       {showInfo && (
         <div className={styles.infoPanel}>{info}</div>
       )}
-    </div>
+    </motion.div>
   );
 }
 
@@ -65,6 +73,17 @@ const item = {
 };
 
 export default function Playground() {
+  const [expandedId, setExpandedId] = useState(null);
+  const shouldReduceMotion = useReducedMotion();
+
+  const expandedInteraction = interactions.find((i) => i.id === expandedId);
+
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === "Escape") setExpandedId(null); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
   return (
     <>
       <Background />
@@ -82,18 +101,65 @@ export default function Playground() {
         <motion.div variants={item} className={styles.header}>
           <h2>My Playground</h2>
           <p className={styles.subtitle}>
-            Interactions I&apos;ve built and things I&apos;ve been exploring. 
+            Interactions I&apos;ve built and things I&apos;ve been exploring.
           </p>
         </motion.div>
+
         {interactions.length > 0 && (
           <motion.div variants={item} className={styles.grid}>
             {interactions.map((interaction) => (
-              
-              <PlaygroundCard key={interaction.id} {...interaction} />
+              <PlaygroundCard
+                key={interaction.id}
+                {...interaction}
+                onExpand={setExpandedId}
+                isExpanded={expandedId === interaction.id}
+              />
             ))}
           </motion.div>
         )}
       </motion.div>
+
+      <AnimatePresence>
+        {expandedInteraction && (() => {
+          const ExpandedComponent = expandedInteraction.component;
+          return (
+            <>
+              <motion.div
+                className={styles.backdrop}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: shouldReduceMotion ? 0 : 0.18 }}
+                onClick={() => setExpandedId(null)}
+              />
+              <div className={styles.expandedWrapper}>
+                <motion.div
+                  layoutId={`card-${expandedInteraction.id}`}
+                  className={`${styles.card} ${styles.cardExpanded}`}
+                  transition={shouldReduceMotion ? { duration: 0 } : spring}
+                  data-theme="dark"
+                >
+                  <div className={styles.cardContentExpanded}>
+                    <ExpandedComponent isActive={true} />
+                  </div>
+                  <div className={styles.cardFooter}>
+                    <h3 className={styles.cardTitle} style={{ opacity: 1 }}>
+                      {expandedInteraction.title}
+                    </h3>
+                    <button
+                      className={styles.closeButton}
+                      onClick={() => setExpandedId(null)}
+                      aria-label="Close"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                </motion.div>
+              </div>
+            </>
+          );
+        })()}
+      </AnimatePresence>
     </>
   );
 }

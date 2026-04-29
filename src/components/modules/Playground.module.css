@@ -66,7 +66,7 @@
   z-index: 0;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.03);
+  background: #1a1a1f;
   display: flex;
   flex-direction: column;
   transition: border-color 0.2s ease;
@@ -106,8 +106,33 @@
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   padding: 14px 16px;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 6px;
+  line-height: 1;
+  border-radius: 4px;
+  transition: color 0.15s ease;
+  display: none;
+}
+
+.cardExpanded .closeButton {
+  display: flex;
+}
+
+.closeButton:hover {
+  color: var(--color-text);
 }
 
 .cardTitle {
@@ -172,6 +197,43 @@
   color: var(--color-text-muted);
   line-height: 1.5;
   z-index: 1000;
+}
+
+/* ── Expanded overlay ──────────────────────────────────────────────────────── */
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 5100;
+  cursor: pointer;
+}
+
+.expandedWrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5101;
+  pointer-events: none;
+}
+
+.cardExpanded {
+  width: min(80vw, 960px);
+  height: min(72vh, 640px);
+  pointer-events: all;
+  cursor: default;
+}
+
+.cardContentExpanded {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 /* ── Responsive ────────────────────────────────────────────────────────────── */
