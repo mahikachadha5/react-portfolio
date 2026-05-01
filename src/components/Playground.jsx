@@ -37,6 +37,7 @@ function PlaygroundCard({ id, title, component: Component, info, onExpand, isExp
         pointerEvents: isExpanded ? "none" : "auto",
         cursor: "pointer",
       }}
+      whileTap={{ scale: 0.97 }}
       transition={shouldReduceMotion ? { duration: 0 } : spring}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
