@@ -1,4 +1,15 @@
-[ 
+[
+  {
+    "id": 5,
+    "name": "gradient-swoop",
+    "description": "An npm package for animated gradient swoop backgrounds.",
+    "longDesc": "gradient-swoop is an npm package that renders a smooth, animated gradient ribbon using a cubic Bézier curve rendered on canvas. It uses ordered strip tessellation along the curve with per-strip linear gradients and a film grain overlay for texture. Comes with a live playground so you can tweak colors, thickness, and animation speed in real time.",
+    "skills": ["TypeScript", "Next.js", "Tailwind CSS", "npm", "Open Source"],
+    "imageUrl": "/assets/projects/gradient_swoop.mp4",
+    "sourceCode": "https://www.npmjs.com/package/gradient-swoop",
+    "demoUrl": "https://gradient-swoop.vercel.app/",
+    "clickable": true
+  },
   {
     "id": 0,
     "name": "Echo",
@@ -9,6 +20,16 @@
     "sourceCode": "https://github.com/mahikachadha5/echo",
     "clickable": true,
     "demoUrl": "https://echoreviews.netlify.app"
+  },
+  {
+    "id": 3,
+    "name": "Databuddy",
+    "description": "Designed and built feature pages for Databuddy's marketing site.",
+    "longDesc": "Databuddy is an analytics platform for developers and indie makers. I designed and built their marketing site's feature pages in Next.js, TypeScript, and Tailwind CSS — including interactive demos that let visitors experience the product before signing up. Focused on clear visual hierarchy and strong communication of the product's value.",
+    "skills": ["Next.js", "TypeScript", "Tailwind CSS", "UI/UX Design", "Figma"],
+    "imageUrl": "/assets/projects/databuddy_featurepage.mp4",
+    "sourceCode": null,
+    "clickable": true
   },
   {
     "id": 1,
@@ -28,16 +49,6 @@
     "skills": ["Python", "Stable Baselines3", "Reinforcement Learning", "Gymnasium", "PPO"],
     "imageUrl": "/assets/projects/cartpole_vid.mp4",
     "sourceCode": "https://github.com/mahikachadha5/cartpole_v1_stable_baselines",
-    "clickable": true
-  },
-  {
-    "id": 3,
-    "name": "strategy.town",
-    "description": "A real-time multiplayer game platform.",
-    "longDesc": "The project extended existing single-player functionality to support real-time multiplayer interactions, user progress tracking, and personalized statistics dashboards. Players can track wins, streaks, and scores over time, adding a competitive and engaging layer to the games. The project demonstrates both front-end development skills and system design thinking required to manage multiplayer game state and user data.",
-    "skills": ["TypeScript", "Node.js", "Mongo DB", "React"],
-    "imageUrl": "/assets/projects/strategytown.png",
-    "sourceCode": "https://github.com/neu-cs4530/summer25-project-summer25-project-binacle",
     "clickable": true
   },
   {
