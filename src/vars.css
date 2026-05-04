@@ -1,3 +1,45 @@
+@font-face {
+  font-family: "Editorial New";
+  src: url("/fonts/PPEditorialNew-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Editorial New";
+  src: url("/fonts/PPEditorialNew-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Editorial New";
+  src: url("/fonts/PPEditorialNew-Ultralight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Editorial New";
+  src: url("/fonts/PPEditorialNew-UltralightItalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Editorial New";
+  src: url("/fonts/PPEditorialNew-Ultrabold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Editorial New";
+  src: url("/fonts/PPEditorialNew-UltraboldItalic.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+}
+
 :root {
   /* Base Colors — light theme defaults */
   --color-bg: #eeeae8;
@@ -5,7 +47,8 @@
   --color-text-muted: rgba(21, 22, 22, 0.5);
   --color-surface: rgba(255, 255, 255, 0.6);
   --color-border: rgba(0, 0, 0, 0.08);
-  --color-primary: #5B1166;}
+  --color-primary: #5B1166;
+}
 
 [data-theme="dark"] {
   --color-bg: #0e0e0e;
@@ -27,7 +70,7 @@
   --color-glow-rgb: 131, 53, 143;
 
   /* Fonts */
-  --font-heading: "Instrument Serif", serif;
+  --font-heading: "Editorial New", serif;
   --font-body: "Inter", sans-serif;
 
   /* Font sizes */
@@ -44,8 +87,8 @@
   --weight-bold: 600;
 
   /* Body font spacing */
-  --tracking-tight: -0.02em;    /* Large serif headings */
-  --tracking-normal: 0;          /* Body text */
-  --tracking-wide: 0.04em;       /* Small labels, nav */
-  --tracking-wider: 0.08em;      /* Uppercase metadata */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+  --tracking-wider: 0.08em;
 }
