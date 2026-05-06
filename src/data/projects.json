@@ -2,6 +2,9 @@
   {
     "id": 5,
     "name": "gradient-swoop",
+    "subtitle": "A configurable React component for animated gradient curves.",
+    "category": "Open source",
+    "template": "A",
     "description": "An npm package for animated gradient swoop backgrounds.",
     "longDesc": "gradient-swoop is an npm package that renders a smooth, animated gradient ribbon using a cubic Bézier curve rendered on canvas. It uses ordered strip tessellation along the curve with per-strip linear gradients and a film grain overlay for texture. Comes with a live playground so you can tweak colors, thickness, and animation speed in real time.",
     "skills": ["TypeScript", "Next.js", "Tailwind CSS", "npm", "Open Source"],
@@ -13,17 +16,23 @@
   {
     "id": 0,
     "name": "Echo",
+    "subtitle": "Every review, distilled into something worth reading.",
+    "category": "Personal project",
+    "template": "B",
     "description": "AI-powered review intelligence for an restaurant, café, or venue.",
     "longDesc": "Echo is a full-stack web app that transforms public reviews into actionable insights about any place. Search any restaurant, hotel, or venue and get Claude's distilled take, sentiment scoring with trend analysis, topic breakdowns by mention frequency, visit timing recommendations, vibe and tone profiling, and insider tips — all without reading a single review. Built with React, Node.js, and the Anthropic and Google Places APIs.",
     "skills": ["React", "JavaScript", "CSS", "Node.js", "Anthropic API", "Google Maps API"],
     "imageUrl": "/assets/projects/echo_carbone.mp4",
     "sourceCode": "https://github.com/mahikachadha5/echo",
-    "clickable": true,
-    "demoUrl": "https://echoreviews.netlify.app"
+    "demoUrl": "https://echoreviews.netlify.app",
+    "clickable": true
   },
   {
     "id": 3,
     "name": "Databuddy",
+    "subtitle": "Feature pages that earn the sign-up.",
+    "category": "Client work",
+    "template": "C",
     "description": "Designed and built feature pages for Databuddy's marketing site.",
     "longDesc": "Databuddy is an analytics platform for developers and indie makers. I designed and built their marketing site's feature pages in Next.js, TypeScript, and Tailwind CSS — including interactive demos that let visitors experience the product before signing up. Focused on clear visual hierarchy and strong communication of the product's value.",
     "skills": ["Next.js", "TypeScript", "Tailwind CSS", "UI/UX Design", "Figma"],
@@ -34,6 +43,9 @@
   {
     "id": 1,
     "name": "Self-Driving Agent from Scratch",
+    "subtitle": "Learning to drive without imitation data.",
+    "category": "Research",
+    "template": "D",
     "description": "Trained a DQN agent to drive using only raw pixels as input.",
     "longDesc": "This project implements a Deep Q-Network agent from scratch using PyTorch to solve the CarRacing-v3 environment from Gymnasium. The agent learns entirely from raw pixel input, receiving 96x96 RGB frames and deciding when to steer, accelerate, or brake. The implementation includes a CNN architecture that processes 4 stacked gray scale frames to detect motion, an experience replay buffer to break correlation in training data, a target network for stable Q-value estimation, and epsilon-greedy exploration that decays over time. Key challenges included frame preprocessing (cropping, gray scale conversion, normalization), tuning hyperparameters like learning rate and epsilon decay, and implementing checkpoint saving to resume training across sessions. The project demonstrates understanding of core RL concepts including the Bellman equation, Q-learning, and the exploration-exploitation tradeoff.",
     "skills": ["Python", "PyTorch", "Reinforcement Learning", "CNNs", "Computer Vision"],
@@ -44,6 +56,9 @@
   {
     "id": 2,
     "name": "Balancing Act",
+    "subtitle": "First principles, first project.",
+    "category": "Research",
+    "template": "E",
     "description": "Trained an PPO agent to perfectly balance a pole on a moving cart.",
     "longDesc": "This project explores the fundamentals of reinforcement learning by training an agent to solve the classic CartPole control problem. Using Stable Baselines3 and OpenAI Gymnasium, I implemented a PPO (Proximal Policy Optimization) agent that learns to balance a pole on a cart by applying left or right forces. The agent observes cart position, cart velocity, pole angle, and pole angular velocity, then decides which direction to push. Before training, the agent averaged around 20 reward per episode with inconsistent, poor performance. After 20,000 timesteps of training, the agent achieved perfect 500/500 scores across all evaluation episodes — effectively solving the environment. This project served as my introduction to RL concepts including policy gradients, reward signals, and the exploration-exploitation tradeoff.",
     "skills": ["Python", "Stable Baselines3", "Reinforcement Learning", "Gymnasium", "PPO"],
@@ -54,6 +69,9 @@
   {
     "id": 4,
     "name": "Calibration Workflow Redesign",
+    "subtitle": "Saving researchers from the worst part of their workflow.",
+    "category": "Client work",
+    "template": "C",
     "description": "Redesigned the sensor calibration workflow for EMG research software.",
     "longDesc": "I redesigned an EMG calibration workflow at a global software company* specializing in wearable sensors, a critical step that allows researchers to normalize sensors to participants' muscles for accurate study results. I overhauled the UX, UI, and user flows, introducing multi-sensor calibration to save researchers time while increasing consistency and reliability in their data collection. This project was completed in collaboration with a team of three, highlighting both coordination and design problem-solving in a fast-paced environment. *Project details and designs withheld for privacy.",
     "skills": ["UI/UX Design", "Figma", "C#", ".NET / WPF", "User Flows", "Workflow Optimization"],
