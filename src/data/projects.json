@@ -1,5 +1,15 @@
 [
   {
+    "id": 6,
+    "name": "concept: hero redesign for temporal",
+    "description": "",
+    "longDesc": "",
+    "skills": [],
+    "imageUrl": "/assets/projects/temporal_redesign.mp4",
+    "sourceCode": null,
+    "clickable": false
+  },
+  {
     "id": 5,
     "name": "gradient-swoop",
     "description": "An npm package for animated gradient swoop backgrounds.",
@@ -39,26 +49,6 @@
     "skills": ["Python", "PyTorch", "Reinforcement Learning", "CNNs", "Computer Vision"],
     "imageUrl": "/assets/projects/car_vid.mp4",
     "sourceCode": "https://github.com/mahikachadha5/car-racing-agent-rl",
-    "clickable": true
-  },
-  {
-    "id": 2,
-    "name": "Balancing Act",
-    "description": "Trained an PPO agent to perfectly balance a pole on a moving cart.",
-    "longDesc": "This project explores the fundamentals of reinforcement learning by training an agent to solve the classic CartPole control problem. Using Stable Baselines3 and OpenAI Gymnasium, I implemented a PPO (Proximal Policy Optimization) agent that learns to balance a pole on a cart by applying left or right forces. The agent observes cart position, cart velocity, pole angle, and pole angular velocity, then decides which direction to push. Before training, the agent averaged around 20 reward per episode with inconsistent, poor performance. After 20,000 timesteps of training, the agent achieved perfect 500/500 scores across all evaluation episodes — effectively solving the environment. This project served as my introduction to RL concepts including policy gradients, reward signals, and the exploration-exploitation tradeoff.",
-    "skills": ["Python", "Stable Baselines3", "Reinforcement Learning", "Gymnasium", "PPO"],
-    "imageUrl": "/assets/projects/cartpole_vid.mp4",
-    "sourceCode": "https://github.com/mahikachadha5/cartpole_v1_stable_baselines",
-    "clickable": true
-  },
-  {
-    "id": 4,
-    "name": "Calibration Workflow Redesign",
-    "description": "Redesigned the sensor calibration workflow for EMG research software.",
-    "longDesc": "I redesigned an EMG calibration workflow at a global software company* specializing in wearable sensors, a critical step that allows researchers to normalize sensors to participants' muscles for accurate study results. I overhauled the UX, UI, and user flows, introducing multi-sensor calibration to save researchers time while increasing consistency and reliability in their data collection. This project was completed in collaboration with a team of three, highlighting both coordination and design problem-solving in a fast-paced environment. *Project details and designs withheld for privacy.",
-    "skills": ["UI/UX Design", "Figma", "C#", ".NET / WPF", "User Flows", "Workflow Optimization"],
-    "imageUrl": "/assets/projects/calibration_vid.mp4",
-    "sourceCode": null,
     "clickable": true
   }
 ]
