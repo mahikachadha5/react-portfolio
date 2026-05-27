@@ -29,7 +29,7 @@ export default function Hero() {
             <br />
             <br />
             Previously @ <a className={styles.link} href="https://www.calvinklein.us/en">Calvin Klein</a> and <a className={styles.link} href="https://delsys.com/">Delsys</a>.
-            Currently building RL agents that can see and playing around with D3.js.
+            Currently obsessing over typography, micro-interactions, and the physics of good UI.
           </div>
         </motion.div>
       </motion.div>
